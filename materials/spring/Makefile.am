@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/spring/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/spring
+else
 materialdir = $(datadir)/Coin/materials/spring
+endif
+
 dist_material_DATA = \
 	spring.0 spring.1 spring.2 spring.3 spring.4 \
 	spring.5 spring.6 spring.7 spring.8 spring.9 \

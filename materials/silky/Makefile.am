@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/silky/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/silky
+else
 materialdir = $(datadir)/Coin/materials/silky
+endif
+
 dist_material_DATA = \
 	silky.0 silky.1 silky.2 silky.3 silky.4 \
 	silky.5 silky.6 silky.7 silky.8 silky.9 \

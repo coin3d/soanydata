@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/neon/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/neon
+else
 materialdir = $(datadir)/Coin/materials/neon
+endif
+
 dist_material_DATA = \
 	neon.0 neon.1 neon.2 neon.3 neon.4 \
 	neon.5 neon.6 neon.7 neon.8 neon.9 \

@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/sheen/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/sheen
+else
 materialdir = $(datadir)/Coin/materials/sheen
+endif
+
 dist_material_DATA = \
 	sheen.0 sheen.1 sheen.2 sheen.3 sheen.4 \
 	sheen.5 sheen.6 sheen.7 sheen.8 sheen.9 \

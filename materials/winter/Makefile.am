@@ -2,7 +2,11 @@
 ## So@GUI@/data/materials/winter/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/winter
+else
 materialdir = $(datadir)/Coin/materials/winter
+endif
 dist_material_DATA = \
 	winter.0 winter.1 winter.2 winter.3 winter.4 \
 	winter.5 winter.6 winter.7 winter.8 winter.9 \

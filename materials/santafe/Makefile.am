@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/santafe/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/santafe
+else
 materialdir = $(datadir)/Coin/materials/santafe
+endif
+
 dist_material_DATA = \
 	santafe.0 santafe.1 santafe.2 santafe.3 santafe.4 \
 	santafe.5 santafe.6 santafe.7 santafe.8 santafe.9 \

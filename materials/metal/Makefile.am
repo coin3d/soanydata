@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/metal/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/metal
+else
 materialdir = $(datadir)/Coin/materials/metal
+endif
+
 dist_material_DATA = \
 	metal.0 metal.1 metal.2 metal.3 metal.4 \
 	metal.5 metal.6 metal.7 metal.8 metal.9 \

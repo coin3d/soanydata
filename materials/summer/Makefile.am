@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/summer/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/summer
+else
 materialdir = $(datadir)/Coin/materials/summer
+endif
+
 dist_material_DATA = \
 	summer.0 summer.1 summer.2 summer.3 summer.4 \
 	summer.5 summer.6 summer.7 summer.8 summer.9 \

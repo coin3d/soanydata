@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/autumn/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/autumn
+else
 materialdir = $(datadir)/Coin/materials/autumn
+endif
+
 dist_material_DATA = \
 	autumn.0 autumn.1 autumn.2 autumn.3 autumn.4 \
 	autumn.5 autumn.6 autumn.7 autumn.8 autumn.9 \

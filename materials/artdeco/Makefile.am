@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/artdeco/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/artdeco
+else
 materialdir = $(datadir)/Coin/materials/artdeco
+endif
+
 dist_material_DATA = \
 	artdeco.0 artdeco.1 artdeco.2 artdeco.3 artdeco.4 \
 	artdeco.5 artdeco.6 artdeco.7 artdeco.8 artdeco.9 \

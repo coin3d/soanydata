@@ -2,7 +2,12 @@
 ## So@GUI@/glass/materials/glass/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/glass
+else
 materialdir = $(datadir)/Coin/materials/glass
+endif
+
 dist_material_DATA = \
 	glass.0 glass.1 glass.2 glass.3 glass.4 \
 	glass.5 glass.6 glass.7 glass.8 glass.9 \

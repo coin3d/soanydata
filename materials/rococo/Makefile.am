@@ -2,7 +2,12 @@
 ## So@GUI@/data/materials/rococo/Makefile.am
 ## $Id$
 
+if MAC_FRAMEWORK
+materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/rococo
+else
 materialdir = $(datadir)/Coin/materials/rococo
+endif
+
 dist_material_DATA = \
 	rococo.0 rococo.1 rococo.2 rococo.3 rococo.4 \
 	rococo.5 rococo.6 rococo.7 rococo.8 rococo.9 \
