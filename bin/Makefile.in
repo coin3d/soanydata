@@ -1,4 +1,4 @@
-# Makefile.in generated automatically by automake 1.4a from Makefile.am
+# Makefile.in generated automatically by automake 1.4c from Makefile.am
 
 # Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000
 # Free Software Foundation, Inc.
@@ -61,10 +61,6 @@ POST_UNINSTALL = :
 AMDEP = @AMDEP@
 AMTAR = @AMTAR@
 AWK = @AWK@
-CC = @CC@
-CPP = @CPP@
-CXX = @CXX@
-CXXCPP = @CXXCPP@
 DEPDIR = @DEPDIR@
 GUI = @GUI@
 Gui = @Gui@
@@ -130,6 +126,9 @@ check-am: all-am
 check: check-am
 installcheck-am:
 installcheck: installcheck-am
+all-recursive-am: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+
 install-exec-am:
 install-exec: install-exec-am
 
@@ -177,12 +176,24 @@ maintainer-clean-am:  maintainer-clean-generic distclean-am
 
 maintainer-clean: maintainer-clean-am
 
-.PHONY: tags distdir info-am info dvi-am dvi check check-am \
-installcheck-am installcheck install-exec-am install-exec \
-install-data-am install-data install-am install uninstall-am uninstall \
-all-redirect all-am all install-strip installdirs mostlyclean-generic \
-distclean-generic clean-generic maintainer-clean-generic clean \
-mostlyclean distclean maintainer-clean
+.PHONY:  all all all-am all-am all-recursive all-recursive-am \
+all-recursive-am all-redirect all-redirect check check check-am \
+check-am check-recursive clean clean clean-generic clean-generic \
+clean-hdr clean-recursive clean-tags distclean distclean \
+distclean-generic distclean-generic distclean-hdr distclean-recursive \
+distclean-tags distdir distdir dvi dvi dvi-am dvi-am dvi-recursive info \
+info info-am info-am info-recursive install install install-am \
+install-am install-data install-data install-data-am install-data-am \
+install-data-recursive install-exec install-exec install-exec-am \
+install-exec-am install-exec-recursive install-recursive install-strip \
+install-strip installcheck installcheck installcheck-am installcheck-am \
+installcheck-recursive installdirs installdirs installdirs-am \
+installdirs-recursive maintainer-clean maintainer-clean \
+maintainer-clean-generic maintainer-clean-generic maintainer-clean-hdr \
+maintainer-clean-recursive maintainer-clean-tags mostlyclean \
+mostlyclean mostlyclean-generic mostlyclean-generic mostlyclean-hdr \
+mostlyclean-recursive mostlyclean-tags tags tags-recursive uninstall \
+uninstall uninstall-am uninstall-am uninstall-recursive
 
 
 ############################################################################

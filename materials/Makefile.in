@@ -1,4 +1,4 @@
-# Makefile.in generated automatically by automake 1.4a from Makefile.am
+# Makefile.in generated automatically by automake 1.4c from Makefile.am
 
 # Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000
 # Free Software Foundation, Inc.
@@ -61,10 +61,6 @@ POST_UNINSTALL = :
 AMDEP = @AMDEP@
 AMTAR = @AMTAR@
 AWK = @AWK@
-CC = @CC@
-CPP = @CPP@
-CXX = @CXX@
-CXXCPP = @CXXCPP@
 DEPDIR = @DEPDIR@
 GUI = @GUI@
 Gui = @Gui@
@@ -101,6 +97,7 @@ DIST_COMMON =  $(noinst_HEADERS) Makefile.am Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 
 GZIP_ENV = --best
+DIST_SUBDIRS =  $(SUBDIRS)
 all: all-redirect
 .SUFFIXES:
 $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
@@ -117,7 +114,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 # (1) if the variable is set in `config.status', edit `config.status'
 #     (which will cause the Makefiles to be regenerated when you run `make');
 # (2) otherwise, pass the desired values on the `make' command line.
-
 all-recursive install-data-recursive install-exec-recursive \
 installdirs-recursive install-recursive uninstall-recursive  \
 check-recursive installcheck-recursive info-recursive dvi-recursive:
@@ -143,7 +139,11 @@ mostlyclean-recursive clean-recursive distclean-recursive \
 maintainer-clean-recursive:
 	@set fnord $(MAKEFLAGS); amf=$$2; \
 	dot_seen=no; \
-	rev=''; list='$(SUBDIRS)'; for subdir in $$list; do \
+	case "$@" in \
+	  distclean-* | maintainer-clean-*) list='$(DIST_SUBDIRS)' ;; \
+	  *) list='$(SUBDIRS)' ;; \
+	esac; \
+	rev=''; for subdir in $$list; do \
 	  if test "$$subdir" = "."; then :; else \
 	    rev="$$subdir $$rev"; \
 	  fi; \
@@ -194,6 +194,11 @@ TAGS: tags-recursive $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) \
 	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
 	  || etags $(ETAGS_ARGS) $$tags  $$unique $(LISP)
 
+GTAGS:
+	here=`CDPATH=: && cd $(top_builddir) && pwd` \
+	  && cd $(top_srcdir) \
+	  && gtags -i $$here
+
 mostlyclean-tags:
 
 clean-tags:
@@ -234,6 +239,9 @@ check-am: all-am
 check: check-recursive
 installcheck-am:
 installcheck: installcheck-recursive
+all-recursive-am: $(BUILT_SOURCES)
+	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+
 install-exec-am:
 install-exec: install-exec-recursive
 
@@ -246,7 +254,7 @@ install: install-recursive
 uninstall-am:
 uninstall: uninstall-recursive
 all-am: Makefile $(HEADERS)
-all-redirect: all-recursive
+all-redirect: all-recursive-am
 install-strip:
 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
 installdirs: installdirs-recursive
@@ -283,19 +291,36 @@ maintainer-clean-am:  maintainer-clean-tags maintainer-clean-generic \
 
 maintainer-clean: maintainer-clean-recursive
 
-.PHONY: install-recursive uninstall-recursive install-data-recursive \
-uninstall-data-recursive install-exec-recursive \
-uninstall-exec-recursive installdirs-recursive uninstalldirs-recursive \
-all-recursive check-recursive installcheck-recursive info-recursive \
-dvi-recursive mostlyclean-recursive distclean-recursive clean-recursive \
-maintainer-clean-recursive tags tags-recursive mostlyclean-tags \
-distclean-tags clean-tags maintainer-clean-tags distdir info-am info \
-dvi-am dvi check check-am installcheck-am installcheck install-exec-am \
-install-exec install-data-am install-data install-am install \
-uninstall-am uninstall all-redirect all-am all install-strip \
-installdirs-am installdirs mostlyclean-generic distclean-generic \
-clean-generic maintainer-clean-generic clean mostlyclean distclean \
-maintainer-clean
+.PHONY:   all all all all-am all-am all-am all-recursive all-recursive \
+all-recursive-am all-recursive-am all-recursive-am all-redirect \
+all-redirect all-redirect check check check check-am check-am check-am \
+check-recursive check-recursive clean clean clean clean-generic \
+clean-generic clean-generic clean-hdr clean-recursive clean-recursive \
+clean-tags clean-tags distclean distclean distclean distclean-generic \
+distclean-generic distclean-generic distclean-hdr distclean-recursive \
+distclean-recursive distclean-tags distclean-tags distdir distdir \
+distdir dvi dvi dvi dvi-am dvi-am dvi-am dvi-recursive dvi-recursive \
+info info info info-am info-am info-am info-recursive info-recursive \
+install install install install-am install-am install-am install-data \
+install-data install-data install-data-am install-data-am \
+install-data-am install-data-recursive install-data-recursive \
+install-exec install-exec install-exec install-exec-am install-exec-am \
+install-exec-am install-exec-recursive install-exec-recursive \
+install-recursive install-recursive install-strip install-strip \
+install-strip installcheck installcheck installcheck installcheck-am \
+installcheck-am installcheck-am installcheck-recursive \
+installcheck-recursive installdirs installdirs installdirs \
+installdirs-am installdirs-am installdirs-recursive \
+installdirs-recursive maintainer-clean maintainer-clean \
+maintainer-clean maintainer-clean-generic maintainer-clean-generic \
+maintainer-clean-generic maintainer-clean-hdr \
+maintainer-clean-recursive maintainer-clean-recursive \
+maintainer-clean-tags maintainer-clean-tags mostlyclean mostlyclean \
+mostlyclean mostlyclean-generic mostlyclean-generic mostlyclean-generic \
+mostlyclean-hdr mostlyclean-recursive mostlyclean-recursive \
+mostlyclean-tags mostlyclean-tags tags tags tags-recursive \
+tags-recursive uninstall uninstall uninstall uninstall-am uninstall-am \
+uninstall-am uninstall-recursive uninstall-recursive
 
 
 ############################################################################
