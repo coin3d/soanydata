@@ -64,6 +64,9 @@ EXEEXT = @EXEEXT@
 GUI = @GUI@
 Gui = @Gui@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+MAC_FRAMEWORK_NAME = @MAC_FRAMEWORK_NAME@
+MAC_FRAMEWORK_PREFIX = @MAC_FRAMEWORK_PREFIX@
+MAC_FRAMEWORK_VERSION = @MAC_FRAMEWORK_VERSION@
 MAINT = @MAINT@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
@@ -73,7 +76,9 @@ am__quote = @am__quote@
 gui = @gui@
 install_sh = @install_sh@
 
-materialdir = $(datadir)/Coin/materials/artdeco
+@MAC_FRAMEWORK_TRUE@materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/artdeco
+@MAC_FRAMEWORK_FALSE@materialdir = $(datadir)/Coin/materials/artdeco
+
 dist_material_DATA = \
 	artdeco.0 artdeco.1 artdeco.2 artdeco.3 artdeco.4 \
 	artdeco.5 artdeco.6 artdeco.7 artdeco.8 artdeco.9 \
@@ -110,7 +115,7 @@ all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
-$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am  $(top_srcdir)/configure.ac $(ACLOCAL_M4)
 	cd $(top_srcdir) && \
 	  $(AUTOMAKE) --gnu  materials/artdeco/Makefile
 Makefile: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.in  $(top_builddir)/config.status

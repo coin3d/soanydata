@@ -64,6 +64,9 @@ EXEEXT = @EXEEXT@
 GUI = @GUI@
 Gui = @Gui@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+MAC_FRAMEWORK_NAME = @MAC_FRAMEWORK_NAME@
+MAC_FRAMEWORK_PREFIX = @MAC_FRAMEWORK_PREFIX@
+MAC_FRAMEWORK_VERSION = @MAC_FRAMEWORK_VERSION@
 MAINT = @MAINT@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
@@ -73,7 +76,9 @@ am__quote = @am__quote@
 gui = @gui@
 install_sh = @install_sh@
 
-materialdir = $(datadir)/Coin/materials/glass
+@MAC_FRAMEWORK_TRUE@materialdir = $(MAC_FRAMEWORK_PREFIX)/$(MAC_FRAMEWORK_NAME).framework/Versions/$(MAC_FRAMEWORK_VERSION)/Resources/materials/glass
+@MAC_FRAMEWORK_FALSE@materialdir = $(datadir)/Coin/materials/glass
+
 dist_material_DATA = \
 	glass.0 glass.1 glass.2 glass.3 glass.4 \
 	glass.5 glass.6 glass.7 glass.8 glass.9 \
@@ -110,7 +115,7 @@ all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
 .SUFFIXES:
-$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am  $(top_srcdir)/configure.in $(ACLOCAL_M4)
+$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am  $(top_srcdir)/configure.ac $(ACLOCAL_M4)
 	cd $(top_srcdir) && \
 	  $(AUTOMAKE) --gnu  materials/glass/Makefile
 Makefile: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.in  $(top_builddir)/config.status
