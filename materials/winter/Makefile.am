@@ -26,182 +26,112 @@ noinst_DATA = $(BUILT_SOURCES)
 
 ############################################################################
 
-winter.h: $(top_srcdir)/materials/winter/winter.h.in
+winter.h: $(srcdir)/winter.h.in
 	@( cd $(top_builddir); $(MAKE) built-sources )
 
-winter_0.h: \
-  $(top_srcdir)/materials/winter/winter.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.0 \
-	  > $@
+winter_0.h: $(srcdir)/winter.0 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.0 > $@
 
-winter_1.h: \
-  $(top_srcdir)/materials/winter/winter.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.1 \
-	  > $@
+winter_1.h: $(srcdir)/winter.1 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.1 > $@
 
-winter_2.h: \
-  $(top_srcdir)/materials/winter/winter.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.2 \
-	  > $@
+winter_2.h: $(srcdir)/winter.2 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.2 > $@
 
-winter_3.h: \
-  $(top_srcdir)/materials/winter/winter.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.3 \
-	  > $@
+winter_3.h: $(srcdir)/winter.3 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.3 > $@
 
-winter_4.h: \
-  $(top_srcdir)/materials/winter/winter.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.4 \
-	  > $@
+winter_4.h: $(srcdir)/winter.4 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.4 > $@
 
-winter_5.h: \
-  $(top_srcdir)/materials/winter/winter.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.5 \
-	  > $@
+winter_5.h: $(srcdir)/winter.5 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.5 > $@
 
-winter_6.h: \
-  $(top_srcdir)/materials/winter/winter.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.6 \
-	  > $@
+winter_6.h: $(srcdir)/winter.6 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.6 > $@
 
-winter_7.h: \
-  $(top_srcdir)/materials/winter/winter.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.7 \
-	  > $@
+winter_7.h: $(srcdir)/winter.7 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.7 > $@
 
-winter_8.h: \
-  $(top_srcdir)/materials/winter/winter.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.8 \
-	  > $@
+winter_8.h: $(srcdir)/winter.8 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.8 > $@
 
-winter_9.h: \
-  $(top_srcdir)/materials/winter/winter.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.9 \
-	  > $@
+winter_9.h: $(srcdir)/winter.9 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.9 > $@
 
-winter_10.h: \
-  $(top_srcdir)/materials/winter/winter.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.10 \
-	  > $@
+winter_10.h: $(srcdir)/winter.10 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.10 > $@
 
-winter_11.h: \
-  $(top_srcdir)/materials/winter/winter.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.11 \
-	  > $@
+winter_11.h: $(srcdir)/winter.11 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.11 > $@
 
-winter_12.h: \
-  $(top_srcdir)/materials/winter/winter.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.12 \
-	  > $@
+winter_12.h: $(srcdir)/winter.12 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.12 > $@
 
-winter_13.h: \
-  $(top_srcdir)/materials/winter/winter.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.13 \
-	  > $@
+winter_13.h: $(srcdir)/winter.13 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.13 > $@
 
-winter_14.h: \
-  $(top_srcdir)/materials/winter/winter.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.14 \
-	  > $@
+winter_14.h: $(srcdir)/winter.14 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.14 > $@
 
-winter_15.h: \
-  $(top_srcdir)/materials/winter/winter.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.15 \
-	  > $@
+winter_15.h: $(srcdir)/winter.15 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.15 > $@
 
-winter_16.h: \
-  $(top_srcdir)/materials/winter/winter.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.16 \
-	  > $@
+winter_16.h: $(srcdir)/winter.16 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.16 > $@
 
-winter_17.h: \
-  $(top_srcdir)/materials/winter/winter.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.17 \
-	  > $@
+winter_17.h: $(srcdir)/winter.17 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.17 > $@
 
-winter_18.h: \
-  $(top_srcdir)/materials/winter/winter.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.18 \
-	  > $@
+winter_18.h: $(srcdir)/winter.18 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.18 > $@
 
-winter_19.h: \
-  $(top_srcdir)/materials/winter/winter.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.19 \
-	  > $@
+winter_19.h: $(srcdir)/winter.19 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.19 > $@
 
-winter_20.h: \
-  $(top_srcdir)/materials/winter/winter.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.20 \
-	  > $@
+winter_20.h: $(srcdir)/winter.20 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.20 > $@
 
-winter_21.h: \
-  $(top_srcdir)/materials/winter/winter.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.21 \
-	  > $@
+winter_21.h: $(srcdir)/winter.21 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.21 > $@
 
-winter_22.h: \
-  $(top_srcdir)/materials/winter/winter.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.22 \
-	  > $@
+winter_22.h: $(srcdir)/winter.22 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.22 > $@
 
-winter_23.h: \
-  $(top_srcdir)/materials/winter/winter.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.23 \
-	  > $@
+winter_23.h: $(srcdir)/winter.23 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.23 > $@
 
-winter_24.h: \
-  $(top_srcdir)/materials/winter/winter.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.24 \
-	  > $@
+winter_24.h: $(srcdir)/winter.24 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.24 > $@
 
-winter_25.h: \
-  $(top_srcdir)/materials/winter/winter.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.25 \
-	  > $@
+winter_25.h: $(srcdir)/winter.25 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.25 > $@
 
-winter_26.h: \
-  $(top_srcdir)/materials/winter/winter.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.26 \
-	  > $@
+winter_26.h: $(srcdir)/winter.26 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.26 > $@
 
-winter_27.h: \
-  $(top_srcdir)/materials/winter/winter.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.27 \
-	  > $@
+winter_27.h: $(srcdir)/winter.27 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.27 > $@
 
-winter_28.h: \
-  $(top_srcdir)/materials/winter/winter.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.28 \
-	  > $@
+winter_28.h: $(srcdir)/winter.28 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.28 > $@
 
-winter_29.h: \
-  $(top_srcdir)/materials/winter/winter.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.29 \
-	  > $@
+winter_29.h: $(srcdir)/winter.29 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.29 > $@
 
-winter_30.h: \
-  $(top_srcdir)/materials/winter/winter.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.30 \
-	  > $@
+winter_30.h: $(srcdir)/winter.30 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.30 > $@
 
-winter_31.h: \
-  $(top_srcdir)/materials/winter/winter.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.31 \
-	  > $@
+winter_31.h: $(srcdir)/winter.31 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.31 > $@
 
-winter_32.h: \
-  $(top_srcdir)/materials/winter/winter.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.32 \
-	  > $@
+winter_32.h: $(srcdir)/winter.32 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.32 > $@
 
-winter_33.h: \
-  $(top_srcdir)/materials/winter/winter.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.33 \
-	  > $@
+winter_33.h: $(srcdir)/winter.33 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.33 > $@
 
-winter_34.h: \
-  $(top_srcdir)/materials/winter/winter.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/winter/winter.34 \
-	  > $@
+winter_34.h: $(srcdir)/winter.34 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/winter.34 > $@
 
 ############################################################################

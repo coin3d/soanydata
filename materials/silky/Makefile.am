@@ -26,147 +26,112 @@ noinst_DATA = $(BUILT_SOURCES)
 
 ############################################################################
 
-silky.h: $(top_srcdir)/materials/silky/silky.h.in
+silky.h: $(srcdir)/silky.h.in
 	@( cd $(top_builddir); $(MAKE) built-sources )
 
-silky_0.h: \
-  $(top_srcdir)/materials/silky/silky.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.0 > $@
+silky_0.h: $(srcdir)/silky.0 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.0 > $@
 
-silky_1.h: \
-  $(top_srcdir)/materials/silky/silky.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.1 > $@
+silky_1.h: $(srcdir)/silky.1 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.1 > $@
 
-silky_2.h: \
-  $(top_srcdir)/materials/silky/silky.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.2 > $@
+silky_2.h: $(srcdir)/silky.2 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.2 > $@
 
-silky_3.h: \
-  $(top_srcdir)/materials/silky/silky.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.3 > $@
+silky_3.h: $(srcdir)/silky.3 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.3 > $@
 
-silky_4.h: \
-  $(top_srcdir)/materials/silky/silky.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.4 > $@
+silky_4.h: $(srcdir)/silky.4 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.4 > $@
 
-silky_5.h: \
-  $(top_srcdir)/materials/silky/silky.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.5 > $@
+silky_5.h: $(srcdir)/silky.5 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.5 > $@
 
-silky_6.h: \
-  $(top_srcdir)/materials/silky/silky.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.6 > $@
+silky_6.h: $(srcdir)/silky.6 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.6 > $@
 
-silky_7.h: \
-  $(top_srcdir)/materials/silky/silky.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.7 > $@
+silky_7.h: $(srcdir)/silky.7 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.7 > $@
 
-silky_8.h: \
-  $(top_srcdir)/materials/silky/silky.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.8 > $@
+silky_8.h: $(srcdir)/silky.8 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.8 > $@
 
-silky_9.h: \
-  $(top_srcdir)/materials/silky/silky.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.9 > $@
+silky_9.h: $(srcdir)/silky.9 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.9 > $@
 
-silky_10.h: \
-  $(top_srcdir)/materials/silky/silky.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.10 > $@
+silky_10.h: $(srcdir)/silky.10 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.10 > $@
 
-silky_11.h: \
-  $(top_srcdir)/materials/silky/silky.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.11 > $@
+silky_11.h: $(srcdir)/silky.11 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.11 > $@
 
-silky_12.h: \
-  $(top_srcdir)/materials/silky/silky.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.12 > $@
+silky_12.h: $(srcdir)/silky.12 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.12 > $@
 
-silky_13.h: \
-  $(top_srcdir)/materials/silky/silky.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.13 > $@
+silky_13.h: $(srcdir)/silky.13 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.13 > $@
 
-silky_14.h: \
-  $(top_srcdir)/materials/silky/silky.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.14 > $@
+silky_14.h: $(srcdir)/silky.14 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.14 > $@
 
-silky_15.h: \
-  $(top_srcdir)/materials/silky/silky.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.15 > $@
+silky_15.h: $(srcdir)/silky.15 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.15 > $@
 
-silky_16.h: \
-  $(top_srcdir)/materials/silky/silky.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.16 > $@
+silky_16.h: $(srcdir)/silky.16 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.16 > $@
 
-silky_17.h: \
-  $(top_srcdir)/materials/silky/silky.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.17 > $@
+silky_17.h: $(srcdir)/silky.17 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.17 > $@
 
-silky_18.h: \
-  $(top_srcdir)/materials/silky/silky.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.18 > $@
+silky_18.h: $(srcdir)/silky.18 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.18 > $@
 
-silky_19.h: \
-  $(top_srcdir)/materials/silky/silky.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.19 > $@
+silky_19.h: $(srcdir)/silky.19 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.19 > $@
 
-silky_20.h: \
-  $(top_srcdir)/materials/silky/silky.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.20 > $@
+silky_20.h: $(srcdir)/silky.20 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.20 > $@
 
-silky_21.h: \
-  $(top_srcdir)/materials/silky/silky.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.21 > $@
+silky_21.h: $(srcdir)/silky.21 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.21 > $@
 
-silky_22.h: \
-  $(top_srcdir)/materials/silky/silky.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.22 > $@
+silky_22.h: $(srcdir)/silky.22 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.22 > $@
 
-silky_23.h: \
-  $(top_srcdir)/materials/silky/silky.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.23 > $@
+silky_23.h: $(srcdir)/silky.23 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.23 > $@
 
-silky_24.h: \
-  $(top_srcdir)/materials/silky/silky.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.24 > $@
+silky_24.h: $(srcdir)/silky.24 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.24 > $@
 
-silky_25.h: \
-  $(top_srcdir)/materials/silky/silky.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.25 > $@
+silky_25.h: $(srcdir)/silky.25 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.25 > $@
 
-silky_26.h: \
-  $(top_srcdir)/materials/silky/silky.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.26 > $@
+silky_26.h: $(srcdir)/silky.26 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.26 > $@
 
-silky_27.h: \
-  $(top_srcdir)/materials/silky/silky.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.27 > $@
+silky_27.h: $(srcdir)/silky.27 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.27 > $@
 
-silky_28.h: \
-  $(top_srcdir)/materials/silky/silky.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.28 > $@
+silky_28.h: $(srcdir)/silky.28 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.28 > $@
 
-silky_29.h: \
-  $(top_srcdir)/materials/silky/silky.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.29 > $@
+silky_29.h: $(srcdir)/silky.29 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.29 > $@
 
-silky_30.h: \
-  $(top_srcdir)/materials/silky/silky.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.30 > $@
+silky_30.h: $(srcdir)/silky.30 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.30 > $@
 
-silky_31.h: \
-  $(top_srcdir)/materials/silky/silky.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.31 > $@
+silky_31.h: $(srcdir)/silky.31 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.31 > $@
 
-silky_32.h: \
-  $(top_srcdir)/materials/silky/silky.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.32 > $@
+silky_32.h: $(srcdir)/silky.32 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.32 > $@
 
-silky_33.h: \
-  $(top_srcdir)/materials/silky/silky.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.33 > $@
+silky_33.h: $(srcdir)/silky.33 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.33 > $@
 
-silky_34.h: \
-  $(top_srcdir)/materials/silky/silky.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/silky/silky.34 > $@
+silky_34.h: $(srcdir)/silky.34 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/silky.34 > $@
 
 ############################################################################

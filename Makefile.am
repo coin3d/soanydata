@@ -2,7 +2,7 @@
 ## So@GUI@/data/Makefile.am
 ## $Id$
 
-SUBDIRS = bin materials
+SUBDIRS = . bin materials
 
 BUILT_SOURCES = \
 	bin/iv2h.sh \
@@ -21,7 +21,7 @@ BUILT_SOURCES = \
 	materials/tropical/tropical.h \
 	materials/winter/winter.h
 
-noinst_DATA = $(BUILT_SOURCES)
+noinst_HEADERS = $(BUILT_SOURCES)
 
 ############################################################################
 

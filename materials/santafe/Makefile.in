@@ -224,183 +224,113 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 ############################################################################
 
-santafe.h: $(top_srcdir)/materials/santafe/santafe.h.in
+santafe.h: $(srcdir)/santafe.h.in
 	@( cd $(top_builddir); $(MAKE) built-sources )
 
-santafe_0.h: \
-  $(top_srcdir)/materials/santafe/santafe.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.0 > $@
+santafe_0.h: $(srcdir)/santafe.0 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.0 > $@
 
-santafe_1.h: \
-  $(top_srcdir)/materials/santafe/santafe.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.1 > $@
+santafe_1.h: $(srcdir)/santafe.1 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.1 > $@
 
-santafe_2.h: \
-  $(top_srcdir)/materials/santafe/santafe.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.2 > $@
+santafe_2.h: $(srcdir)/santafe.2 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.2 > $@
 
-santafe_3.h: \
-  $(top_srcdir)/materials/santafe/santafe.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.3 > $@
+santafe_3.h: $(srcdir)/santafe.3 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.3 > $@
 
-santafe_4.h: \
-  $(top_srcdir)/materials/santafe/santafe.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.4 > $@
+santafe_4.h: $(srcdir)/santafe.4 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.4 > $@
 
-santafe_5.h: \
-  $(top_srcdir)/materials/santafe/santafe.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.5 > $@
+santafe_5.h: $(srcdir)/santafe.5 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.5 > $@
 
-santafe_6.h: \
-  $(top_srcdir)/materials/santafe/santafe.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.6 > $@
+santafe_6.h: $(srcdir)/santafe.6 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.6 > $@
 
-santafe_7.h: \
-  $(top_srcdir)/materials/santafe/santafe.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.7 > $@
+santafe_7.h: $(srcdir)/santafe.7 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.7 > $@
 
-santafe_8.h: \
-  $(top_srcdir)/materials/santafe/santafe.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.8 > $@
+santafe_8.h: $(srcdir)/santafe.8 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.8 > $@
 
-santafe_9.h: \
-  $(top_srcdir)/materials/santafe/santafe.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.9 > $@
+santafe_9.h: $(srcdir)/santafe.9 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.9 > $@
 
-santafe_10.h: \
-  $(top_srcdir)/materials/santafe/santafe.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.10 > $@
+santafe_10.h: $(srcdir)/santafe.10 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.10 > $@
 
-santafe_11.h: \
-  $(top_srcdir)/materials/santafe/santafe.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.11 > $@
+santafe_11.h: $(srcdir)/santafe.11 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.11 > $@
 
-santafe_12.h: \
-  $(top_srcdir)/materials/santafe/santafe.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.12 > $@
+santafe_12.h: $(srcdir)/santafe.12 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.12 > $@
 
-santafe_13.h: \
-  $(top_srcdir)/materials/santafe/santafe.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.13 > $@
+santafe_13.h: $(srcdir)/santafe.13 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.13 > $@
 
-santafe_14.h: \
-  $(top_srcdir)/materials/santafe/santafe.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.14 > $@
+santafe_14.h: $(srcdir)/santafe.14 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.14 > $@
 
-santafe_15.h: \
-  $(top_srcdir)/materials/santafe/santafe.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.15 > $@
+santafe_15.h: $(srcdir)/santafe.15 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.15 > $@
 
-santafe_16.h: \
-  $(top_srcdir)/materials/santafe/santafe.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.16 > $@
+santafe_16.h: $(srcdir)/santafe.16 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.16 > $@
 
-santafe_17.h: \
-  $(top_srcdir)/materials/santafe/santafe.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.17 > $@
+santafe_17.h: $(srcdir)/santafe.17 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.17 > $@
 
-santafe_18.h: \
-  $(top_srcdir)/materials/santafe/santafe.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.18 > $@
+santafe_18.h: $(srcdir)/santafe.18 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.18 > $@
 
-santafe_19.h: \
-  $(top_srcdir)/materials/santafe/santafe.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.19 > $@
+santafe_19.h: $(srcdir)/santafe.19 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.19 > $@
 
-santafe_20.h: \
-  $(top_srcdir)/materials/santafe/santafe.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.20 > $@
+santafe_20.h: $(srcdir)/santafe.20 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.20 > $@
 
-santafe_21.h: \
-  $(top_srcdir)/materials/santafe/santafe.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.21 > $@
+santafe_21.h: $(srcdir)/santafe.21 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.21 > $@
 
-santafe_22.h: \
-  $(top_srcdir)/materials/santafe/santafe.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.22 > $@
+santafe_22.h: $(srcdir)/santafe.22 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.22 > $@
 
-santafe_23.h: \
-  $(top_srcdir)/materials/santafe/santafe.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.23 > $@
+santafe_23.h: $(srcdir)/santafe.23 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.23 > $@
 
-santafe_24.h: \
-  $(top_srcdir)/materials/santafe/santafe.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.24 > $@
+santafe_24.h: $(srcdir)/santafe.24 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.24 > $@
 
-santafe_25.h: \
-  $(top_srcdir)/materials/santafe/santafe.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.25 > $@
+santafe_25.h: $(srcdir)/santafe.25 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.25 > $@
 
-santafe_26.h: \
-  $(top_srcdir)/materials/santafe/santafe.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.26 > $@
+santafe_26.h: $(srcdir)/santafe.26 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.26 > $@
 
-santafe_27.h: \
-  $(top_srcdir)/materials/santafe/santafe.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.27 > $@
+santafe_27.h: $(srcdir)/santafe.27 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.27 > $@
 
-santafe_28.h: \
-  $(top_srcdir)/materials/santafe/santafe.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.28 > $@
+santafe_28.h: $(srcdir)/santafe.28 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.28 > $@
 
-santafe_29.h: \
-  $(top_srcdir)/materials/santafe/santafe.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.29 > $@
+santafe_29.h: $(srcdir)/santafe.29 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.29 > $@
 
-santafe_30.h: \
-  $(top_srcdir)/materials/santafe/santafe.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.30 > $@
+santafe_30.h: $(srcdir)/santafe.30 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.30 > $@
 
-santafe_31.h: \
-  $(top_srcdir)/materials/santafe/santafe.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.31 > $@
+santafe_31.h: $(srcdir)/santafe.31 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.31 > $@
 
-santafe_32.h: \
-  $(top_srcdir)/materials/santafe/santafe.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.32 > $@
+santafe_32.h: $(srcdir)/santafe.32 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.32 > $@
 
-santafe_33.h: \
-  $(top_srcdir)/materials/santafe/santafe.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.33 > $@
+santafe_33.h: $(srcdir)/santafe.33 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.33 > $@
 
-santafe_34.h: \
-  $(top_srcdir)/materials/santafe/santafe.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh \
-	  $(top_srcdir)/materials/santafe/santafe.34 > $@
+santafe_34.h: $(srcdir)/santafe.34 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/santafe.34 > $@
 
 ############################################################################
 

@@ -26,182 +26,112 @@ noinst_HEADERS = $(BUILT_SOURCES)
 
 ############################################################################
 
-artdeco.h: $(top_srcdir)/materials/artdeco/artdeco.h.in
+artdeco.h: $(srcdir)/artdeco.h.in
 	@( cd $(top_builddir); $(MAKE) built-sources )
 
-artdeco_0.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.0 \
-	  > $@
+artdeco_0.h: $(srcdir)/artdeco.0 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.0 > $@
 
-artdeco_1.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.1 \
-	  > $@
+artdeco_1.h: $(srcdir)/artdeco.1 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.1 > $@
 
-artdeco_2.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.2 \
-	  > $@
+artdeco_2.h: $(srcdir)/artdeco.2 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.2 > $@
 
-artdeco_3.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.3 \
-	  > $@
+artdeco_3.h: $(srcdir)/artdeco.3 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.3 > $@
 
-artdeco_4.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.4 \
-	  > $@
+artdeco_4.h: $(srcdir)/artdeco.4 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.4 > $@
 
-artdeco_5.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.5 \
-	  > $@
+artdeco_5.h: $(srcdir)/artdeco.5 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.5 > $@
 
-artdeco_6.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.6 \
-	  > $@
+artdeco_6.h: $(srcdir)/artdeco.6 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.6 > $@
 
-artdeco_7.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.7 \
-	  > $@
+artdeco_7.h: $(srcdir)/artdeco.7 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.7 > $@
 
-artdeco_8.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.8 \
-	  > $@
+artdeco_8.h: $(srcdir)/artdeco.8 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.8 > $@
 
-artdeco_9.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.9 \
-	  > $@
+artdeco_9.h: $(srcdir)/artdeco.9 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.9 > $@
 
-artdeco_10.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.10 \
-	  > $@
+artdeco_10.h: $(srcdir)/artdeco.10 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.10 > $@
 
-artdeco_11.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.11 \
-	  > $@
+artdeco_11.h: $(srcdir)/artdeco.11 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.11 > $@
 
-artdeco_12.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.12 \
-	  > $@
+artdeco_12.h: $(srcdir)/artdeco.12 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.12 > $@
 
-artdeco_13.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.13 \
-	  > $@
+artdeco_13.h: $(srcdir)/artdeco.13 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.13 > $@
 
-artdeco_14.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.14 \
-	  > $@
+artdeco_14.h: $(srcdir)/artdeco.14 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.14 > $@
 
-artdeco_15.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.15 \
-	  > $@
+artdeco_15.h: $(srcdir)/artdeco.15 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.15 > $@
 
-artdeco_16.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.16 \
-	  > $@
+artdeco_16.h: $(srcdir)/artdeco.16 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.16 > $@
 
-artdeco_17.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.17 \
-	  > $@
+artdeco_17.h: $(srcdir)/artdeco.17 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.17 > $@
 
-artdeco_18.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.18 \
-	  > $@
+artdeco_18.h: $(srcdir)/artdeco.18 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.18 > $@
 
-artdeco_19.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.19 \
-	  > $@
+artdeco_19.h: $(srcdir)/artdeco.19 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.19 > $@
 
-artdeco_20.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.20 \
-	  > $@
+artdeco_20.h: $(srcdir)/artdeco.20 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.20 > $@
 
-artdeco_21.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.21 \
-	  > $@
+artdeco_21.h: $(srcdir)/artdeco.21 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.21 > $@
 
-artdeco_22.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.22 \
-	  > $@
+artdeco_22.h: $(srcdir)/artdeco.22 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.22 > $@
 
-artdeco_23.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.23 \
-	  > $@
+artdeco_23.h: $(srcdir)/artdeco.23 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.23 > $@
 
-artdeco_24.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.24 \
-	  > $@
+artdeco_24.h: $(srcdir)/artdeco.24 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.24 > $@
 
-artdeco_25.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.25 \
-	  > $@
+artdeco_25.h: $(srcdir)/artdeco.25 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.25 > $@
 
-artdeco_26.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.26 \
-	  > $@
+artdeco_26.h: $(srcdir)/artdeco.26 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.26 > $@
 
-artdeco_27.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.27 \
-	  > $@
+artdeco_27.h: $(srcdir)/artdeco.27 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.27 > $@
 
-artdeco_28.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.28 \
-	  > $@
+artdeco_28.h: $(srcdir)/artdeco.28 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.28 > $@
 
-artdeco_29.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.29 \
-	  > $@
+artdeco_29.h: $(srcdir)/artdeco.29 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.29 > $@
 
-artdeco_30.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.30 \
-	  > $@
+artdeco_30.h: $(srcdir)/artdeco.30 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.30 > $@
 
-artdeco_31.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.31 \
-	  > $@
+artdeco_31.h: $(srcdir)/artdeco.31 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.31 > $@
 
-artdeco_32.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.32 \
-	  > $@
+artdeco_32.h: $(srcdir)/artdeco.32 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.32 > $@
 
-artdeco_33.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.33 \
-	  > $@
+artdeco_33.h: $(srcdir)/artdeco.33 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.33 > $@
 
-artdeco_34.h: \
-  $(top_srcdir)/materials/artdeco/artdeco.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/artdeco/artdeco.34 \
-	  > $@
+artdeco_34.h: $(srcdir)/artdeco.34 $(top_builddir)/bin/iv2h.sh
+	$(top_builddir)/bin/iv2h.sh $(srcdir)/artdeco.34 > $@
 
 ############################################################################

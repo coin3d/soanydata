@@ -2,7 +2,7 @@
 ## SoXt/data/materials/Makefile.am
 ## $Id$
 
-SUBDIRS = \
+SUBDIRS = . \
 	artdeco autumn glass metal neon rococo santafe \
 	sheen silky spring summer tropical winter
 
@@ -13,7 +13,7 @@ noinst_HEADERS = $(BUILT_SOURCES)
 
 ############################################################################
 
-materials.h: $(top_srcdir)/materials/materials.h.in
+materials.h: $(srcdir)/materials.h.in
 	@( cd $(top_builddir); $(MAKE) built-sources )
 
 ############################################################################
