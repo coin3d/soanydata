@@ -1,5 +1,8 @@
 # **************************************************************************
+# data/configure.in
+
 AC_INIT(materials/Makefile.am)
+AC_CONFIG_AUX_DIR(cfg)
 
 # **************************************************************************
 # Miscellaneous options and initializations.
@@ -9,17 +12,19 @@ AM_INIT_AUTOMAKE(data, 1.0.0)
 # File to cram results from the configure tests into.
 AM_CONFIG_HEADER(config.h)
 
-# Turn off default maintainer make-rules -- use ./autogen.sh instead.
+# Turn off default maintainer make-rules -- use ./bootstrap instead.
 AM_MAINTAINER_MODE
 
 # **************************************************************************
 # Search and set up necessary stuff to use the GUI library.
 
-# Environment variables to configure the generic sourcefiles.
-
-sim_ac_libconfigvars=${srcdir}/../libconfigvars.sh
-if test -f ${sim_ac_libconfigvars}; then
-  . ${sim_ac_libconfigvars}
+sim_ac_configcmd=../so*-config
+if test -f $sim_ac_configcmd; then
+  GUI=`$sim_ac_configcmd --ac-subst GUI`
+  Gui=`$sim_ac_configcmd --ac-subst Gui`
+  gui=`$sim_ac_configcmd --ac-subst gui`
+else
+  AC_MSG_ERROR([found no so*-config command in ..])
 fi
 
 AC_SUBST(GUI)
@@ -48,4 +53,3 @@ AC_OUTPUT([
 	materials/winter/Makefile
 ])
 
-# **************************************************************************

@@ -102,7 +102,7 @@ BUILT_SOURCES = \
 
 noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/metal
-mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+mkinstalldirs = $(SHELL) $(top_srcdir)/cfg/mkinstalldirs
 CONFIG_HEADER = ../../config.h
 CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 

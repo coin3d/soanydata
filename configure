@@ -746,11 +746,8 @@ case `echo "testing\c"; echo 1,2,3`,`echo -n testing; echo 1,2,3` in
   *)      ECHO_N= ECHO_C='\c' ECHO_T= ;;
 esac
 
-# **************************************************************************
-# Miscellaneous options and initializations.
-
 ac_aux_dir=
-for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
+for ac_dir in cfg $srcdir/cfg; do
   if test -f $ac_dir/install-sh; then
     ac_aux_dir=$ac_dir
     ac_install_sh="$ac_aux_dir/install-sh -c"
@@ -766,11 +763,14 @@ for ac_dir in $srcdir $srcdir/.. $srcdir/../..; do
   fi
 done
 if test -z "$ac_aux_dir"; then
-  { echo "configure: error: cannot find install-sh or install.sh in $srcdir $srcdir/.. $srcdir/../.." >&2; exit 1; }
+  { echo "configure: error: cannot find install-sh or install.sh in cfg $srcdir/cfg" >&2; exit 1; }
 fi
 ac_config_guess="$SHELL $ac_aux_dir/config.guess"
 ac_config_sub="$SHELL $ac_aux_dir/config.sub"
 ac_configure="$SHELL $ac_aux_dir/configure" # This should be Cygnus configure.
+
+# **************************************************************************
+# Miscellaneous options and initializations.
 
 # Find a good install program.  We prefer a C program (faster),
 # so one script is as good as another.  But avoid the broken or
@@ -1053,7 +1053,7 @@ ac_config_headers="$ac_config_headers config.h"
 
   ac_config_commands="$ac_config_commands default-1"
 
-# Turn off default maintainer make-rules -- use ./autogen.sh instead.
+# Turn off default maintainer make-rules -- use ./bootstrap instead.
 echo "configure:1057: checking whether to enable maintainer-specific portions of Makefiles" >&5
 echo $ECHO_N "checking whether to enable maintainer-specific portions of Makefiles... $ECHO_C" >&6
     # Check whether --enable-maintainer-mode or --disable-maintainer-mode was given.
@@ -1078,11 +1078,13 @@ fi
 # **************************************************************************
 # Search and set up necessary stuff to use the GUI library.
 
-# Environment variables to configure the generic sourcefiles.
-
-sim_ac_libconfigvars=${srcdir}/../libconfigvars.sh
-if test -f ${sim_ac_libconfigvars}; then
-  . ${sim_ac_libconfigvars}
+sim_ac_configcmd=../so*-config
+if test -f $sim_ac_configcmd; then
+  GUI=`$sim_ac_configcmd --ac-subst GUI`
+  Gui=`$sim_ac_configcmd --ac-subst Gui`
+  gui=`$sim_ac_configcmd --ac-subst gui`
+else
+  { echo "configure: error: found no so*-config command in .." >&2; exit 1; }
 fi
 
 # **************************************************************************
@@ -1876,4 +1878,3 @@ trap 'exit 1' 1 2 15
 
 test "$no_create" = yes || $SHELL $CONFIG_STATUS || exit 1
 
-# **************************************************************************
