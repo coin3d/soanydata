@@ -1,4 +1,4 @@
-# aclocal.m4 generated automatically by aclocal 1.4c
+# aclocal.m4 generated automatically by aclocal 1.4e
 
 # Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000
 # Free Software Foundation, Inc.
@@ -48,7 +48,7 @@ AC_DEFUN([AM_INIT_AUTOMAKE],
 # test to see if srcdir already configured
 if test "`CDPATH=:; cd $srcdir && pwd`" != "`pwd`" &&
    test -f $srcdir/config.status; then
-  AC_MSG_ERROR([source directory already configured; run "make distclean" there first])
+  AC_MSG_ERROR([source directory already configured; run \"make distclean\" there first])
 fi
 
 # Define the identity of the package.
@@ -60,6 +60,16 @@ ifelse([$3],,
 [AC_DEFINE_UNQUOTED(PACKAGE, "$PACKAGE", [Name of package])
 AC_DEFINE_UNQUOTED(VERSION, "$VERSION", [Version number of package])])
 
+# Autoconf 2.50 wants to disallow AM_ names.  We explicitly allow
+# the ones we care about.
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_CFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_CPPFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_CXXFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_OBJCFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_FFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_RFLAGS])])
+ifdef([m4_pattern_allow], [m4_pattern_allow([AM_GCJFLAGS])])
+
 # Some tools Automake needs.
 AC_REQUIRE([AM_SANITY_CHECK])dnl
 AC_REQUIRE([AC_ARG_PROGRAM])dnl
@@ -70,6 +80,7 @@ AM_MISSING_PROG(AUTOHEADER, autoheader)
 AM_MISSING_PROG(MAKEINFO, makeinfo)
 AM_MISSING_PROG(AMTAR, tar)
 AM_MISSING_INSTALL_SH
+AM_PROG_INSTALL_STRIP
 # We need awk for the "check" target.  The system "awk" is bad on
 # some platforms.
 AC_REQUIRE([AC_PROG_AWK])dnl
@@ -180,6 +191,82 @@ else
 fi
 ])
 
+# AM_AUX_DIR_EXPAND
+
+# For projects using AC_CONFIG_AUX_DIR([foo]), Autoconf sets
+# $ac_aux_dir to ${srcdir}/foo.  In other projects, it is set to `.'.
+# Of course, Automake must honor this variable whenever it call a tool
+# from the auxiliary directory.  The problem is that $srcdir (hence
+# $ac_aux_dir) can be either an absolute path or a path relative to
+# $top_srcdir or absolute, this depends on how configure is run.  This
+# is pretty anoying since it makes $ac_aux_dir quite unusable in
+# subdirectories: on the top source directory, any form will work
+# fine, but in subdirectories relative pat needs to be adapted.
+# - calling $top_srcidr/$ac_aux_dir/missing would success if $srcdir is
+#   relative, but fail if $srcdir is absolute
+# - conversly, calling $ax_aux_dir/missing would fail if $srcdir is
+#   absolute, and success on relative paths.
+#
+# Consequently, we define and use $am_aux_dir, the "always absolute"
+# version of $ac_aux_dir.
+
+AC_DEFUN([AM_AUX_DIR_EXPAND], [
+# expand $ac_aux_dir to an absolute path
+am_aux_dir=`CDPATH=:; cd $ac_aux_dir && pwd`
+])
+
+# One issue with vendor `install' (even GNU) is that you can't
+# specify the program used to strip binaries.  This is especially
+# annoying in cross=compiling environments, where the build's strip
+# is unlikely to handle the host's binaries.
+# Fortunately install-sh will honor a STRIPPROG variable, so if we ever
+# need to use a non standard strip, we just have to make sure we use
+# install-sh with the STRIPPROG variable set.
+AC_DEFUN([AM_PROG_INSTALL_STRIP],
+[AC_REQUIRE([AM_MISSING_INSTALL_SH])
+dnl Don't test for $cross_compiling = yes, it might be `maybe'...
+# We'd like to do this but we can't because it will unconditionally
+# require config.guess.  One way would be if autoconf had the capability
+# to let us compile in this code only when config.guess was already
+# a possibility.
+#if test "$cross_compiling" != no; then
+#  # since we are cross-compiling, we need to check for a suitable `strip'
+#  AM_PROG_STRIP
+#  if test -z "$STRIP"; then
+#    AC_MSG_WARN([strip missing, install-strip will not strip binaries])
+#  fi
+#fi
+
+# If $STRIP is defined (either by the user, or by AM_PROG_STRIP),
+# instruct install-strip to use install-sh and the given $STRIP program.
+# Otherwise, just use ${INSTALL}: the idea is to use the vendor install
+# as much as possible, because it's faster.
+if test -z "$STRIP"; then
+  # The top level make will set INSTALL_PROGRAM=$(INSTALL_STRIP_PROGRAM)
+  # and the double dolard below is there to make sure that ${INSTALL}
+  # is substitued in the sub-makes, not at the top-level; this is
+  # needed if ${INSTALL} is a relative path (ajusted in each subdirectory
+  # by config.status).
+  INSTALL_STRIP_PROGRAM='$${INSTALL} -s'
+  INSTALL_STRIP_PROGRAM_ENV=''
+else
+  _am_dirpart="`echo $install_sh | sed -e 's,//*[[^/]]*$,,'`"
+  INSTALL_STRIP_PROGRAM="\${SHELL} \`CDPATH=: && cd $_am_dirpart && pwd\`/install-sh -c -s"
+  INSTALL_STRIP_PROGRAM_ENV="STRIPPROG='\$(STRIP)'"
+fi
+AC_SUBST([STRIP])
+AC_SUBST([INSTALL_STRIP_PROGRAM])
+AC_SUBST([INSTALL_STRIP_PROGRAM_ENV])])
+
+#AC_DEFUN([AM_PROG_STRIP],
+#[# Check for `strip', unless the installer
+# has set the STRIP environment variable.
+# Note: don't explicitly check for -z "$STRIP" here because
+# that will cause problems if AC_CANONICAL_* is AC_REQUIREd after
+# this macro, and anyway it doesn't have an effect anyway.
+#AC_CHECK_TOOL([STRIP],[strip])
+#])
+
 # serial 3
 
 # There are a few dirty hacks below to avoid letting `AC_PROG_CC' be
@@ -210,14 +297,30 @@ depcpp="$CXXCPP"],
 depcc="$$1"
 depcpp=""])
 
+AC_REQUIRE([AM_MAKE_INCLUDE])
+
 AC_CACHE_CHECK([dependency style of $depcc],
                [am_cv_$1_dependencies_compiler_type],
 [if test -z "$AMDEP"; then
-  echo '#include "conftest.h"' > conftest.c
-  echo 'int i;' > conftest.h
+  # We make a subdir and do the tests there.  Otherwise we can end up
+  # making bogus files that we don't know about and never remove.  For
+  # instance it was reported that on HP-UX the gcc test will end up
+  # making a dummy file named `D' -- because `-MD' means `put the output
+  # in D'.
+  mkdir confdir
+  # Copy depcomp to subdir because otherwise we won't find it if we're
+  # using a relative directory.
+  cp "$am_depcomp" confdir
+  cd confdir
 
   am_cv_$1_dependencies_compiler_type=none
-  for depmode in `sed -n ['s/^#*\([a-zA-Z0-9]*\))$/\1/p'] < "$am_depcomp"`; do
+  for depmode in `sed -n ['s/^#*\([a-zA-Z0-9]*\))$/\1/p'] < "./depcomp"`; do
+    # We need to recreate these files for each test, as the compiler may
+    # overwrite some of them when testing with obscure command lines.
+    # This happens at least with the AIX C compiler.
+    echo '#include "conftest.h"' > conftest.c
+    echo 'int i;' > conftest.h
+
     case "$depmode" in
     nosideeffect)
       # after this tag, mechanisms are not by side-effect, so they'll
@@ -236,14 +339,15 @@ AC_CACHE_CHECK([dependency style of $depcc],
     if depmode="$depmode" \
        source=conftest.c object=conftest.o \
        depfile=conftest.Po tmpdepfile=conftest.TPo \
-       $SHELL $am_depcomp $depcc -c conftest.c -o conftest.o >/dev/null 2>&1 &&
+       $SHELL ./depcomp $depcc -c conftest.c -o conftest.o >/dev/null 2>&1 &&
        grep conftest.h conftest.Po > /dev/null 2>&1; then
       am_cv_$1_dependencies_compiler_type="$depmode"
       break
     fi
   done
 
-  rm -f conftest.*
+  cd ..
+  rm -rf confdir
 else
   am_cv_$1_dependencies_compiler_type=none
 fi
@@ -347,6 +451,31 @@ for mf in $CONFIG_FILES; do
 done
 ], [AMDEP="$AMDEP"
 ac_aux_dir="$ac_aux_dir"])])
+
+# AM_MAKE_INCLUDE()
+# -----------------
+# Check to see how make treats includes.
+AC_DEFUN([AM_MAKE_INCLUDE],
+[am_make=${MAKE-make}
+# BSD make uses .include
+cat > confinc << 'END'
+doit:
+	@echo done
+END
+# If we don't find an include directive, just comment out the code.
+AC_MSG_CHECKING([for style of include used by $am_make])
+_am_include='#'
+for am_inc in include .include; do
+   echo "$am_inc confinc" > confmf
+   if test "`$am_make -f confmf 2> /dev/null`" = "done"; then
+      _am_include=$am_inc
+      break
+   fi
+done
+AC_SUBST(_am_include)
+AC_MSG_RESULT($_am_include)
+rm -f confinc confmf
+])
 
 # Like AC_CONFIG_HEADER, but automatically create stamp file.
 

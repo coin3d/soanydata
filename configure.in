@@ -19,6 +19,7 @@ AM_MAINTAINER_MODE
 # Search and set up necessary stuff to use the GUI library.
 
 sim_ac_configcmd=$srcdir/../so*-config
+test -f ../so*-config && sim_ac_configcmd=../so*-config
 if test -f $sim_ac_configcmd; then
   GUI=`$sim_ac_configcmd --ac-subst GUI`
   Gui=`$sim_ac_configcmd --ac-subst Gui`
