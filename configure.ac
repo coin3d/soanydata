@@ -21,6 +21,20 @@ AM_MAINTAINER_MODE
 # **************************************************************************
 # Search and set up necessary stuff to use the GUI library.
 
+files=0
+for file in ../so*-*.cfg; do
+  files=`expr $files + 1`
+done
+if test $files -gt 1; then
+  rm -f ../so*-*.cfg
+  AC_MSG_ERROR([
+  The configure script will now abort because the configure directory was
+  not clean from configuring/building with multiple --with-alternate options
+  without cleaning out the directory in-between.  The problematic duplicate
+  config files has been removed.  Please repeat the configure command -
+  you will get past this point on the next run.  Sorry for the inconvenience.])
+fi
+
 sim_ac_configfile=../so*-*.cfg
 if test -f $sim_ac_configfile; then
   . $sim_ac_configfile;
