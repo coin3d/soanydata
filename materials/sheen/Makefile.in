@@ -118,15 +118,6 @@ Makefile: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.in  $(top_builddir)/config.s
 	  CONFIG_HEADERS= CONFIG_LINKS= \
 	  CONFIG_FILES=$(subdir)/$@ $(SHELL) ./config.status
 uninstall-info-am:
-install-dist_materialDATA: $(dist_material_DATA)
-	@$(NORMAL_INSTALL)
-	$(mkinstalldirs) $(DESTDIR)$(materialdir)
-	@list='$(dist_material_DATA)'; for p in $$list; do \
-	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-	  f="`echo $$p | sed -e 's|^.*/||'`"; \
-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(materialdir)/$$f"; \
-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(materialdir)/$$f; \
-	done
 
 uninstall-dist_materialDATA:
 	@$(NORMAL_UNINSTALL)
@@ -351,10 +342,10 @@ sheen_34.h: $(srcdir)/sheen.34 $(top_builddir)/bin/iv2h.sh
 
 ############################################################################
 
-install-materialDATA: $(material_DATA)
+install-dist_materialDATA: $(dist_material_DATA)
 	@$(NORMAL_INSTALL)
 	$(mkinstalldirs) $(DESTDIR)$(materialdir)
-	@list='$(material_DATA)'; for p in $$list; do \
+	@list='$(dist_material_DATA)'; for p in $$list; do \
 	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
 	  if cmp -s $$d$$p $(DESTDIR)$(materialdir)/$$f; then :; else \

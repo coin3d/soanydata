@@ -138,10 +138,10 @@ glass_34.h: $(srcdir)/glass.34 $(top_builddir)/bin/iv2h.sh
 
 ############################################################################
 
-install-materialDATA: $(material_DATA)
+install-dist_materialDATA: $(dist_material_DATA)
 	@$(NORMAL_INSTALL)
 	$(mkinstalldirs) $(DESTDIR)$(materialdir)
-	@list='$(material_DATA)'; for p in $$list; do \
+	@list='$(dist_material_DATA)'; for p in $$list; do \
 	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
 	  if cmp -s $$d$$p $(DESTDIR)$(materialdir)/$$f; then :; else \
