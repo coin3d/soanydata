@@ -42,11 +42,13 @@ dehexXXXX='sed -e "s/\\(.\\)\\(.\\)\\(.\\)\\(.\\)/\\1 * 4096 + \\2 * 256 + \\3 *
 precision=8
 file=$1
 style=`basename $1 .dat`
+dir="`echo $0 | sed -e 's/[^\/]*$//g'`"
 
 test ! -e $style && mkdir $style
+test ! -e $dir/material-node.sh && exit 1
 
 line=1
-lines=`cat $1 | wc -l | xargs expr 0 +`
+lines=`cat $file | wc -l | xargs expr 0 +`
 while test $line -le $lines; do
   data=`cat $file | sed -n -e "$line p"`
   save_IFS=$IFS
@@ -258,8 +260,12 @@ while test $line -le $lines; do
       echo "Error: line $line: format of transparency field is not supported"
       exit 1
     fi
-  elif test `echo "$transparency" | egrep -c '^[01]?(\.[0-9]+)?$'` -eq 1; then
+  elif test `echo "$transparency0" | egrep -c '^[01]?(\.[0-9]+)?$'` -eq 1; then
     # assuming float format
+    :
+  elif test `echo "$transparency0" | egrep -c '^[1-9][0-9]*$'` -eq 1; then
+    # assuming 65535-based decimal
+    transparency0=`echo "$precision k $transparency0 65535 / n" | dc`
     :
   else
     echo "Error: line $line: format of transparency field is not supported"
@@ -275,7 +281,7 @@ while test $line -le $lines; do
 
   num=`expr $line - 1`
   echo "generating $style/$style.$num"
-  ./material-node.sh > $style/$style.$num
+  $dir/material-node.sh > $style/$style.$num
   line=`expr $line + 1`
 done
 
