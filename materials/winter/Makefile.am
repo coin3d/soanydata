@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/winter/Makefile.am
-
-BUILT_SOURCES = \
-	winter_0.h winter_1.h winter_2.h winter_3.h winter_4.h \
-	winter_5.h winter_6.h winter_7.h winter_8.h winter_9.h \
-	winter_10.h winter_11.h winter_12.h winter_13.h winter_14.h \
-	winter_15.h winter_16.h winter_17.h winter_18.h winter_19.h \
-	winter_20.h winter_21.h winter_22.h winter_23.h winter_24.h \
-	winter_25.h winter_26.h winter_27.h winter_28.h winter_29.h \
-	winter_30.h winter_31.h winter_32.h winter_33.h winter_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/winter
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	winter.25 winter.26 winter.27 winter.28 winter.29 \
 	winter.30 winter.31 winter.32 winter.33 winter.34
 
+BUILT_SOURCES = \
+	winter.h \
+	winter_0.h winter_1.h winter_2.h winter_3.h winter_4.h \
+	winter_5.h winter_6.h winter_7.h winter_8.h winter_9.h \
+	winter_10.h winter_11.h winter_12.h winter_13.h winter_14.h \
+	winter_15.h winter_16.h winter_17.h winter_18.h winter_19.h \
+	winter_20.h winter_21.h winter_22.h winter_23.h winter_24.h \
+	winter_25.h winter_26.h winter_27.h winter_28.h winter_29.h \
+	winter_30.h winter_31.h winter_32.h winter_33.h winter_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+winter.h: $(top_srcdir)/materials/winter/winter.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 winter_0.h: \
   $(top_srcdir)/materials/winter/winter.0 $(top_builddir)/bin/iv2h.sh

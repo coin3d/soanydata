@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/rococo/Makefile.am
-
-BUILT_SOURCES = \
-	rococo_0.h rococo_1.h rococo_2.h rococo_3.h rococo_4.h \
-	rococo_5.h rococo_6.h rococo_7.h rococo_8.h rococo_9.h \
-	rococo_10.h rococo_11.h rococo_12.h rococo_13.h rococo_14.h \
-	rococo_15.h rococo_16.h rococo_17.h rococo_18.h rococo_19.h \
-	rococo_20.h rococo_21.h rococo_22.h rococo_23.h rococo_24.h \
-	rococo_25.h rococo_26.h rococo_27.h rococo_28.h rococo_29.h \
-	rococo_30.h rococo_31.h rococo_32.h rococo_33.h rococo_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/rococo
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	rococo.25 rococo.26 rococo.27 rococo.28 rococo.29 \
 	rococo.30 rococo.31 rococo.32 rococo.33 rococo.34
 
+BUILT_SOURCES = \
+	rococo.h \
+	rococo_0.h rococo_1.h rococo_2.h rococo_3.h rococo_4.h \
+	rococo_5.h rococo_6.h rococo_7.h rococo_8.h rococo_9.h \
+	rococo_10.h rococo_11.h rococo_12.h rococo_13.h rococo_14.h \
+	rococo_15.h rococo_16.h rococo_17.h rococo_18.h rococo_19.h \
+	rococo_20.h rococo_21.h rococo_22.h rococo_23.h rococo_24.h \
+	rococo_25.h rococo_26.h rococo_27.h rococo_28.h rococo_29.h \
+	rococo_30.h rococo_31.h rococo_32.h rococo_33.h rococo_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+rococo.h: $(top_srcdir)/materials/rococo/rococo.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 rococo_0.h: \
   $(top_srcdir)/materials/rococo/rococo.0 $(top_builddir)/bin/iv2h.sh

@@ -77,18 +77,6 @@ uGUI = @uGUI@
 ############################################################################
 
 
-BUILT_SOURCES = \
-	sheen_0.h sheen_1.h sheen_2.h sheen_3.h sheen_4.h \
-	sheen_5.h sheen_6.h sheen_7.h sheen_8.h sheen_9.h \
-	sheen_10.h sheen_11.h sheen_12.h sheen_13.h sheen_14.h \
-	sheen_15.h sheen_16.h sheen_17.h sheen_18.h sheen_19.h \
-	sheen_20.h sheen_21.h sheen_22.h sheen_23.h sheen_24.h \
-	sheen_25.h sheen_26.h sheen_27.h sheen_28.h sheen_29.h \
-	sheen_30.h sheen_31.h sheen_32.h sheen_33.h sheen_34.h
-
-
-noinst_DATA = $(BUILT_SOURCES)
-
 materialdir = $(datadir)/Coin/materials/sheen
 material_DATA = \
 	sheen.0 sheen.1 sheen.2 sheen.3 sheen.4 \
@@ -99,14 +87,27 @@ material_DATA = \
 	sheen.25 sheen.26 sheen.27 sheen.28 sheen.29 \
 	sheen.30 sheen.31 sheen.32 sheen.33 sheen.34
 
+
+BUILT_SOURCES = \
+	sheen.h \
+	sheen_0.h sheen_1.h sheen_2.h sheen_3.h sheen_4.h \
+	sheen_5.h sheen_6.h sheen_7.h sheen_8.h sheen_9.h \
+	sheen_10.h sheen_11.h sheen_12.h sheen_13.h sheen_14.h \
+	sheen_15.h sheen_16.h sheen_17.h sheen_18.h sheen_19.h \
+	sheen_20.h sheen_21.h sheen_22.h sheen_23.h sheen_24.h \
+	sheen_25.h sheen_26.h sheen_27.h sheen_28.h sheen_29.h \
+	sheen_30.h sheen_31.h sheen_32.h sheen_33.h sheen_34.h
+
+
+noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/sheen
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
-CONFIG_CLEAN_FILES =  sheen.h
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 DATA =  $(material_DATA) $(noinst_DATA)
 
-DIST_COMMON =  Makefile.am Makefile.in sheen.h.in
+DIST_COMMON =  Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -121,8 +122,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-sheen.h: $(top_builddir)/config.status sheen.h.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 install-materialDATA: $(material_DATA)
 	@$(NORMAL_INSTALL)
@@ -224,6 +223,9 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 
 ############################################################################
+
+sheen.h: $(top_srcdir)/materials/sheen/sheen.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 sheen_0.h: \
   $(top_srcdir)/materials/sheen/sheen.0 $(top_builddir)/bin/iv2h.sh

@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/spring/Makefile.am
-
-BUILT_SOURCES = \
-	spring_0.h spring_1.h spring_2.h spring_3.h spring_4.h \
-	spring_5.h spring_6.h spring_7.h spring_8.h spring_9.h \
-	spring_10.h spring_11.h spring_12.h spring_13.h spring_14.h \
-	spring_15.h spring_16.h spring_17.h spring_18.h spring_19.h \
-	spring_20.h spring_21.h spring_22.h spring_23.h spring_24.h \
-	spring_25.h spring_26.h spring_27.h spring_28.h spring_29.h \
-	spring_30.h spring_31.h spring_32.h spring_33.h spring_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/spring
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	spring.25 spring.26 spring.27 spring.28 spring.29 \
 	spring.30 spring.31 spring.32 spring.33 spring.34
 
+BUILT_SOURCES = \
+	spring.h \
+	spring_0.h spring_1.h spring_2.h spring_3.h spring_4.h \
+	spring_5.h spring_6.h spring_7.h spring_8.h spring_9.h \
+	spring_10.h spring_11.h spring_12.h spring_13.h spring_14.h \
+	spring_15.h spring_16.h spring_17.h spring_18.h spring_19.h \
+	spring_20.h spring_21.h spring_22.h spring_23.h spring_24.h \
+	spring_25.h spring_26.h spring_27.h spring_28.h spring_29.h \
+	spring_30.h spring_31.h spring_32.h spring_33.h spring_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+spring.h: $(top_srcdir)/materials/spring/spring.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 spring_0.h: \
   $(top_srcdir)/materials/spring/spring.0 $(top_builddir)/bin/iv2h.sh

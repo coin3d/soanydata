@@ -32,37 +32,20 @@ AC_SUBST(uGUI)
 AC_OUTPUT([
 	Makefile
 	bin/Makefile
-	bin/iv2h.sh
 	materials/Makefile
-	materials/materials.h
 	materials/artdeco/Makefile
-	materials/artdeco/artdeco.h
 	materials/autumn/Makefile
-	materials/autumn/autumn.h
 	materials/glass/Makefile
-	materials/glass/glass.h
 	materials/metal/Makefile
-	materials/metal/metal.h
 	materials/neon/Makefile
-	materials/neon/neon.h
 	materials/rococo/Makefile
-	materials/rococo/rococo.h
 	materials/santafe/Makefile
-	materials/santafe/santafe.h
 	materials/sheen/Makefile
-	materials/sheen/sheen.h
 	materials/silky/Makefile
-	materials/silky/silky.h
 	materials/spring/Makefile
-	materials/spring/spring.h
 	materials/summer/Makefile
-	materials/summer/summer.h
 	materials/tropical/Makefile
-	materials/tropical/tropical.h
 	materials/winter/Makefile
-	materials/winter/winter.h
-], [
-	chmod a+x bin/iv2h.sh
 ])
 
 # **************************************************************************

@@ -77,18 +77,6 @@ uGUI = @uGUI@
 ############################################################################
 
 
-BUILT_SOURCES = \
-	spring_0.h spring_1.h spring_2.h spring_3.h spring_4.h \
-	spring_5.h spring_6.h spring_7.h spring_8.h spring_9.h \
-	spring_10.h spring_11.h spring_12.h spring_13.h spring_14.h \
-	spring_15.h spring_16.h spring_17.h spring_18.h spring_19.h \
-	spring_20.h spring_21.h spring_22.h spring_23.h spring_24.h \
-	spring_25.h spring_26.h spring_27.h spring_28.h spring_29.h \
-	spring_30.h spring_31.h spring_32.h spring_33.h spring_34.h
-
-
-noinst_DATA = $(BUILT_SOURCES)
-
 materialdir = $(datadir)/Coin/materials/spring
 material_DATA = \
 	spring.0 spring.1 spring.2 spring.3 spring.4 \
@@ -99,14 +87,27 @@ material_DATA = \
 	spring.25 spring.26 spring.27 spring.28 spring.29 \
 	spring.30 spring.31 spring.32 spring.33 spring.34
 
+
+BUILT_SOURCES = \
+	spring.h \
+	spring_0.h spring_1.h spring_2.h spring_3.h spring_4.h \
+	spring_5.h spring_6.h spring_7.h spring_8.h spring_9.h \
+	spring_10.h spring_11.h spring_12.h spring_13.h spring_14.h \
+	spring_15.h spring_16.h spring_17.h spring_18.h spring_19.h \
+	spring_20.h spring_21.h spring_22.h spring_23.h spring_24.h \
+	spring_25.h spring_26.h spring_27.h spring_28.h spring_29.h \
+	spring_30.h spring_31.h spring_32.h spring_33.h spring_34.h
+
+
+noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/spring
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
-CONFIG_CLEAN_FILES =  spring.h
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 DATA =  $(material_DATA) $(noinst_DATA)
 
-DIST_COMMON =  Makefile.am Makefile.in spring.h.in
+DIST_COMMON =  Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -121,8 +122,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-spring.h: $(top_builddir)/config.status spring.h.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 install-materialDATA: $(material_DATA)
 	@$(NORMAL_INSTALL)
@@ -224,6 +223,9 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 
 ############################################################################
+
+spring.h: $(top_srcdir)/materials/spring/spring.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 spring_0.h: \
   $(top_srcdir)/materials/spring/spring.0 $(top_builddir)/bin/iv2h.sh

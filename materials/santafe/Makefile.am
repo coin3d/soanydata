@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/santafe/Makefile.am
-
-BUILT_SOURCES = \
-	santafe_0.h santafe_1.h santafe_2.h santafe_3.h santafe_4.h \
-	santafe_5.h santafe_6.h santafe_7.h santafe_8.h santafe_9.h \
-	santafe_10.h santafe_11.h santafe_12.h santafe_13.h santafe_14.h \
-	santafe_15.h santafe_16.h santafe_17.h santafe_18.h santafe_19.h \
-	santafe_20.h santafe_21.h santafe_22.h santafe_23.h santafe_24.h \
-	santafe_25.h santafe_26.h santafe_27.h santafe_28.h santafe_29.h \
-	santafe_30.h santafe_31.h santafe_32.h santafe_33.h santafe_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/santafe
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	santafe.25 santafe.26 santafe.27 santafe.28 santafe.29 \
 	santafe.30 santafe.31 santafe.32 santafe.33 santafe.34
 
+BUILT_SOURCES = \
+	santafe.h \
+	santafe_0.h santafe_1.h santafe_2.h santafe_3.h santafe_4.h \
+	santafe_5.h santafe_6.h santafe_7.h santafe_8.h santafe_9.h \
+	santafe_10.h santafe_11.h santafe_12.h santafe_13.h santafe_14.h \
+	santafe_15.h santafe_16.h santafe_17.h santafe_18.h santafe_19.h \
+	santafe_20.h santafe_21.h santafe_22.h santafe_23.h santafe_24.h \
+	santafe_25.h santafe_26.h santafe_27.h santafe_28.h santafe_29.h \
+	santafe_30.h santafe_31.h santafe_32.h santafe_33.h santafe_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+santafe.h: $(top_srcdir)/materials/santafe/santafe.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 santafe_0.h: \
   $(top_srcdir)/materials/santafe/santafe.0 $(top_builddir)/bin/iv2h.sh

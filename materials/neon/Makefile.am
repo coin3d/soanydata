@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/neon/Makefile.am
-
-BUILT_SOURCES = \
-	neon_0.h neon_1.h neon_2.h neon_3.h neon_4.h \
-	neon_5.h neon_6.h neon_7.h neon_8.h neon_9.h \
-	neon_10.h neon_11.h neon_12.h neon_13.h neon_14.h \
-	neon_15.h neon_16.h neon_17.h neon_18.h neon_19.h \
-	neon_20.h neon_21.h neon_22.h neon_23.h neon_24.h \
-	neon_25.h neon_26.h neon_27.h neon_28.h neon_29.h \
-	neon_30.h neon_31.h neon_32.h neon_33.h neon_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/neon
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	neon.25 neon.26 neon.27 neon.28 neon.29 \
 	neon.30 neon.31 neon.32 neon.33 neon.34
 
+BUILT_SOURCES = \
+	neon.h \
+	neon_0.h neon_1.h neon_2.h neon_3.h neon_4.h \
+	neon_5.h neon_6.h neon_7.h neon_8.h neon_9.h \
+	neon_10.h neon_11.h neon_12.h neon_13.h neon_14.h \
+	neon_15.h neon_16.h neon_17.h neon_18.h neon_19.h \
+	neon_20.h neon_21.h neon_22.h neon_23.h neon_24.h \
+	neon_25.h neon_26.h neon_27.h neon_28.h neon_29.h \
+	neon_30.h neon_31.h neon_32.h neon_33.h neon_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+neon.h: $(top_srcdir)/materials/neon/neon.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 neon_0.h: \
   $(top_srcdir)/materials/neon/neon.0 $(top_builddir)/bin/iv2h.sh

@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/sheen/Makefile.am
-
-BUILT_SOURCES = \
-	sheen_0.h sheen_1.h sheen_2.h sheen_3.h sheen_4.h \
-	sheen_5.h sheen_6.h sheen_7.h sheen_8.h sheen_9.h \
-	sheen_10.h sheen_11.h sheen_12.h sheen_13.h sheen_14.h \
-	sheen_15.h sheen_16.h sheen_17.h sheen_18.h sheen_19.h \
-	sheen_20.h sheen_21.h sheen_22.h sheen_23.h sheen_24.h \
-	sheen_25.h sheen_26.h sheen_27.h sheen_28.h sheen_29.h \
-	sheen_30.h sheen_31.h sheen_32.h sheen_33.h sheen_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/sheen
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	sheen.25 sheen.26 sheen.27 sheen.28 sheen.29 \
 	sheen.30 sheen.31 sheen.32 sheen.33 sheen.34
 
+BUILT_SOURCES = \
+	sheen.h \
+	sheen_0.h sheen_1.h sheen_2.h sheen_3.h sheen_4.h \
+	sheen_5.h sheen_6.h sheen_7.h sheen_8.h sheen_9.h \
+	sheen_10.h sheen_11.h sheen_12.h sheen_13.h sheen_14.h \
+	sheen_15.h sheen_16.h sheen_17.h sheen_18.h sheen_19.h \
+	sheen_20.h sheen_21.h sheen_22.h sheen_23.h sheen_24.h \
+	sheen_25.h sheen_26.h sheen_27.h sheen_28.h sheen_29.h \
+	sheen_30.h sheen_31.h sheen_32.h sheen_33.h sheen_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+sheen.h: $(top_srcdir)/materials/sheen/sheen.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 sheen_0.h: \
   $(top_srcdir)/materials/sheen/sheen.0 $(top_builddir)/bin/iv2h.sh

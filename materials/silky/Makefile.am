@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/silky/Makefile.am
-
-BUILT_SOURCES = \
-	silky_0.h silky_1.h silky_2.h silky_3.h silky_4.h \
-	silky_5.h silky_6.h silky_7.h silky_8.h silky_9.h \
-	silky_10.h silky_11.h silky_12.h silky_13.h silky_14.h \
-	silky_15.h silky_16.h silky_17.h silky_18.h silky_19.h \
-	silky_20.h silky_21.h silky_22.h silky_23.h silky_24.h \
-	silky_25.h silky_26.h silky_27.h silky_28.h silky_29.h \
-	silky_30.h silky_31.h silky_32.h silky_33.h silky_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/silky
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	silky.25 silky.26 silky.27 silky.28 silky.29 \
 	silky.30 silky.31 silky.32 silky.33 silky.34
 
+BUILT_SOURCES = \
+	silky.h \
+	silky_0.h silky_1.h silky_2.h silky_3.h silky_4.h \
+	silky_5.h silky_6.h silky_7.h silky_8.h silky_9.h \
+	silky_10.h silky_11.h silky_12.h silky_13.h silky_14.h \
+	silky_15.h silky_16.h silky_17.h silky_18.h silky_19.h \
+	silky_20.h silky_21.h silky_22.h silky_23.h silky_24.h \
+	silky_25.h silky_26.h silky_27.h silky_28.h silky_29.h \
+	silky_30.h silky_31.h silky_32.h silky_33.h silky_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+silky.h: $(top_srcdir)/materials/silky/silky.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 silky_0.h: \
   $(top_srcdir)/materials/silky/silky.0 $(top_builddir)/bin/iv2h.sh

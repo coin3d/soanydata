@@ -78,26 +78,23 @@ uGUI = @uGUI@
 
 
 SUBDIRS = \
-	artdeco \
-	autumn \
-	glass \
-	metal \
-	neon \
-	rococo \
-	santafe \
-	sheen \
-	silky \
-	spring \
-	summer \
-	tropical \
-	winter
+	artdeco autumn glass metal neon rococo santafe \
+	sheen silky spring summer tropical winter
 
+
+BUILT_SOURCES = \
+	materials.h
+
+
+noinst_HEADERS = $(BUILT_SOURCES)
 subdir = materials
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../config.h
-CONFIG_CLEAN_FILES =  materials.h
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
-DIST_COMMON =  Makefile.am Makefile.in materials.h.in
+HEADERS =  $(noinst_HEADERS)
+
+DIST_COMMON =  $(noinst_HEADERS) Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -112,8 +109,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-materials.h: $(top_builddir)/config.status materials.h.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run `make' without going through this Makefile.
@@ -248,7 +243,7 @@ install-am: all-am
 install: install-recursive
 uninstall-am:
 uninstall: uninstall-recursive
-all-am: Makefile
+all-am: Makefile $(HEADERS)
 all-redirect: all-recursive
 install-strip:
 	$(MAKE) $(AM_MAKEFLAGS) INSTALL_STRIP_FLAG=-s install
@@ -266,6 +261,7 @@ distclean-generic:
 
 maintainer-clean-generic:
 	-rm -f Makefile.in
+	-test -z "$(BUILT_SOURCES)" || rm -f $(BUILT_SOURCES)
 mostlyclean-am:  mostlyclean-tags mostlyclean-generic
 
 mostlyclean: mostlyclean-recursive
@@ -299,6 +295,11 @@ installdirs-am installdirs mostlyclean-generic distclean-generic \
 clean-generic maintainer-clean-generic clean mostlyclean distclean \
 maintainer-clean
 
+
+############################################################################
+
+materials.h: $(top_srcdir)/materials/materials.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 ############################################################################
 

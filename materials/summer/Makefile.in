@@ -77,18 +77,6 @@ uGUI = @uGUI@
 ############################################################################
 
 
-BUILT_SOURCES = \
-	summer_0.h summer_1.h summer_2.h summer_3.h summer_4.h \
-	summer_5.h summer_6.h summer_7.h summer_8.h summer_9.h \
-	summer_10.h summer_11.h summer_12.h summer_13.h summer_14.h \
-	summer_15.h summer_16.h summer_17.h summer_18.h summer_19.h \
-	summer_20.h summer_21.h summer_22.h summer_23.h summer_24.h \
-	summer_25.h summer_26.h summer_27.h summer_28.h summer_29.h \
-	summer_30.h summer_31.h summer_32.h summer_33.h summer_34.h
-
-
-noinst_DATA = $(BUILT_SOURCES)
-
 materialdir = $(datadir)/Coin/materials/summer
 material_DATA = \
 	summer.0 summer.1 summer.2 summer.3 summer.4 \
@@ -99,14 +87,27 @@ material_DATA = \
 	summer.25 summer.26 summer.27 summer.28 summer.29 \
 	summer.30 summer.31 summer.32 summer.33 summer.34
 
+
+BUILT_SOURCES = \
+	summer.h \
+	summer_0.h summer_1.h summer_2.h summer_3.h summer_4.h \
+	summer_5.h summer_6.h summer_7.h summer_8.h summer_9.h \
+	summer_10.h summer_11.h summer_12.h summer_13.h summer_14.h \
+	summer_15.h summer_16.h summer_17.h summer_18.h summer_19.h \
+	summer_20.h summer_21.h summer_22.h summer_23.h summer_24.h \
+	summer_25.h summer_26.h summer_27.h summer_28.h summer_29.h \
+	summer_30.h summer_31.h summer_32.h summer_33.h summer_34.h
+
+
+noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/summer
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
-CONFIG_CLEAN_FILES =  summer.h
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 DATA =  $(material_DATA) $(noinst_DATA)
 
-DIST_COMMON =  Makefile.am Makefile.in summer.h.in
+DIST_COMMON =  Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -121,8 +122,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-summer.h: $(top_builddir)/config.status summer.h.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 install-materialDATA: $(material_DATA)
 	@$(NORMAL_INSTALL)
@@ -224,6 +223,9 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 
 ############################################################################
+
+summer.h: $(top_srcdir)/materials/summer/summer.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 summer_0.h: \
   $(top_srcdir)/materials/summer/summer.0 $(top_builddir)/bin/iv2h.sh

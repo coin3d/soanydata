@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/artdeco/Makefile.am
-
-BUILT_SOURCES = \
-	artdeco_0.h artdeco_1.h artdeco_2.h artdeco_3.h artdeco_4.h \
-	artdeco_5.h artdeco_6.h artdeco_7.h artdeco_8.h artdeco_9.h \
-	artdeco_10.h artdeco_11.h artdeco_12.h artdeco_13.h artdeco_14.h \
-	artdeco_15.h artdeco_16.h artdeco_17.h artdeco_18.h artdeco_19.h \
-	artdeco_20.h artdeco_21.h artdeco_22.h artdeco_23.h artdeco_24.h \
-	artdeco_25.h artdeco_26.h artdeco_27.h artdeco_28.h artdeco_29.h \
-	artdeco_30.h artdeco_31.h artdeco_32.h artdeco_33.h artdeco_34.h
-
-noinst_HEADERS = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/artdeco
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	artdeco.25 artdeco.26 artdeco.27 artdeco.28 artdeco.29 \
 	artdeco.30 artdeco.31 artdeco.32 artdeco.33 artdeco.34
 
+BUILT_SOURCES = \
+	artdeco.h \
+	artdeco_0.h artdeco_1.h artdeco_2.h artdeco_3.h artdeco_4.h \
+	artdeco_5.h artdeco_6.h artdeco_7.h artdeco_8.h artdeco_9.h \
+	artdeco_10.h artdeco_11.h artdeco_12.h artdeco_13.h artdeco_14.h \
+	artdeco_15.h artdeco_16.h artdeco_17.h artdeco_18.h artdeco_19.h \
+	artdeco_20.h artdeco_21.h artdeco_22.h artdeco_23.h artdeco_24.h \
+	artdeco_25.h artdeco_26.h artdeco_27.h artdeco_28.h artdeco_29.h \
+	artdeco_30.h artdeco_31.h artdeco_32.h artdeco_33.h artdeco_34.h
+
+noinst_HEADERS = $(BUILT_SOURCES)
+
 ############################################################################
+
+artdeco.h: $(top_srcdir)/materials/artdeco/artdeco.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 artdeco_0.h: \
   $(top_srcdir)/materials/artdeco/artdeco.0 $(top_builddir)/bin/iv2h.sh

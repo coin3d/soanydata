@@ -77,18 +77,6 @@ uGUI = @uGUI@
 ############################################################################
 
 
-BUILT_SOURCES = \
-	glass_0.h glass_1.h glass_2.h glass_3.h glass_4.h \
-	glass_5.h glass_6.h glass_7.h glass_8.h glass_9.h \
-	glass_10.h glass_11.h glass_12.h glass_13.h glass_14.h \
-	glass_15.h glass_16.h glass_17.h glass_18.h glass_19.h \
-	glass_20.h glass_21.h glass_22.h glass_23.h glass_24.h \
-	glass_25.h glass_26.h glass_27.h glass_28.h glass_29.h \
-	glass_30.h glass_31.h glass_32.h glass_33.h glass_34.h
-
-
-noinst_DATA = $(BUILT_SOURCES)
-
 materialdir = $(datadir)/Coin/materials/glass
 material_DATA = \
 	glass.0 glass.1 glass.2 glass.3 glass.4 \
@@ -99,14 +87,27 @@ material_DATA = \
 	glass.25 glass.26 glass.27 glass.28 glass.29 \
 	glass.30 glass.31 glass.32 glass.33 glass.34
 
+
+BUILT_SOURCES = \
+	glass.h \
+	glass_0.h glass_1.h glass_2.h glass_3.h glass_4.h \
+	glass_5.h glass_6.h glass_7.h glass_8.h glass_9.h \
+	glass_10.h glass_11.h glass_12.h glass_13.h glass_14.h \
+	glass_15.h glass_16.h glass_17.h glass_18.h glass_19.h \
+	glass_20.h glass_21.h glass_22.h glass_23.h glass_24.h \
+	glass_25.h glass_26.h glass_27.h glass_28.h glass_29.h \
+	glass_30.h glass_31.h glass_32.h glass_33.h glass_34.h
+
+
+noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/glass
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
-CONFIG_CLEAN_FILES =  glass.h
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 DATA =  $(material_DATA) $(noinst_DATA)
 
-DIST_COMMON =  Makefile.am Makefile.in glass.h.in
+DIST_COMMON =  Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -121,8 +122,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-glass.h: $(top_builddir)/config.status glass.h.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
 install-materialDATA: $(material_DATA)
 	@$(NORMAL_INSTALL)
@@ -224,6 +223,9 @@ maintainer-clean-generic clean mostlyclean distclean maintainer-clean
 
 
 ############################################################################
+
+glass.h: $(top_srcdir)/materials/glass/glass.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 glass_0.h: \
   $(top_srcdir)/materials/glass/glass.0 $(top_builddir)/bin/iv2h.sh

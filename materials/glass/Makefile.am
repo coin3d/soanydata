@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/glass/materials/glass/Makefile.am
-
-BUILT_SOURCES = \
-	glass_0.h glass_1.h glass_2.h glass_3.h glass_4.h \
-	glass_5.h glass_6.h glass_7.h glass_8.h glass_9.h \
-	glass_10.h glass_11.h glass_12.h glass_13.h glass_14.h \
-	glass_15.h glass_16.h glass_17.h glass_18.h glass_19.h \
-	glass_20.h glass_21.h glass_22.h glass_23.h glass_24.h \
-	glass_25.h glass_26.h glass_27.h glass_28.h glass_29.h \
-	glass_30.h glass_31.h glass_32.h glass_33.h glass_34.h
-
-noinst_DATA = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/glass
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	glass.25 glass.26 glass.27 glass.28 glass.29 \
 	glass.30 glass.31 glass.32 glass.33 glass.34
 
+BUILT_SOURCES = \
+	glass.h \
+	glass_0.h glass_1.h glass_2.h glass_3.h glass_4.h \
+	glass_5.h glass_6.h glass_7.h glass_8.h glass_9.h \
+	glass_10.h glass_11.h glass_12.h glass_13.h glass_14.h \
+	glass_15.h glass_16.h glass_17.h glass_18.h glass_19.h \
+	glass_20.h glass_21.h glass_22.h glass_23.h glass_24.h \
+	glass_25.h glass_26.h glass_27.h glass_28.h glass_29.h \
+	glass_30.h glass_31.h glass_32.h glass_33.h glass_34.h
+
+noinst_DATA = $(BUILT_SOURCES)
+
 ############################################################################
+
+glass.h: $(top_srcdir)/materials/glass/glass.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 glass_0.h: \
   $(top_srcdir)/materials/glass/glass.0 $(top_builddir)/bin/iv2h.sh

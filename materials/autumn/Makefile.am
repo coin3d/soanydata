@@ -1,16 +1,6 @@
 ############################################################################
 ## So@GUI@/data/materials/autumn/Makefile.am
-
-BUILT_SOURCES = \
-	autumn_0.h autumn_1.h autumn_2.h autumn_3.h autumn_4.h \
-	autumn_5.h autumn_6.h autumn_7.h autumn_8.h autumn_9.h \
-	autumn_10.h autumn_11.h autumn_12.h autumn_13.h autumn_14.h \
-	autumn_15.h autumn_16.h autumn_17.h autumn_18.h autumn_19.h \
-	autumn_20.h autumn_21.h autumn_22.h autumn_23.h autumn_24.h \
-	autumn_25.h autumn_26.h autumn_27.h autumn_28.h autumn_29.h \
-	autumn_30.h autumn_31.h autumn_32.h autumn_33.h autumn_34.h
-
-noinst_HEADERS = $(BUILT_SOURCES)
+## $Id$
 
 materialdir = $(datadir)/Coin/materials/autumn
 material_DATA = \
@@ -22,7 +12,22 @@ material_DATA = \
 	autumn.25 autumn.26 autumn.27 autumn.28 autumn.29 \
 	autumn.30 autumn.31 autumn.32 autumn.33 autumn.34
 
+BUILT_SOURCES = \
+	autumn.h \
+	autumn_0.h autumn_1.h autumn_2.h autumn_3.h autumn_4.h \
+	autumn_5.h autumn_6.h autumn_7.h autumn_8.h autumn_9.h \
+	autumn_10.h autumn_11.h autumn_12.h autumn_13.h autumn_14.h \
+	autumn_15.h autumn_16.h autumn_17.h autumn_18.h autumn_19.h \
+	autumn_20.h autumn_21.h autumn_22.h autumn_23.h autumn_24.h \
+	autumn_25.h autumn_26.h autumn_27.h autumn_28.h autumn_29.h \
+	autumn_30.h autumn_31.h autumn_32.h autumn_33.h autumn_34.h
+
+noinst_HEADERS = $(BUILT_SOURCES)
+
 ############################################################################
+
+autumn.h: $(top_srcdir)/materials/autumn/autumn.h.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
 
 autumn_0.h: \
   $(top_srcdir)/materials/autumn/autumn.0 $(top_builddir)/bin/iv2h.sh

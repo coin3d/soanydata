@@ -74,18 +74,21 @@ install_sh = @install_sh@
 lGUI = @lGUI@
 uGUI = @uGUI@
 
+############################################################################
+
 
 BUILT_SOURCES = iv2h.sh
 
 noinst_DATA = iv2h.sh
+EXTRA_DIST = iv2h.sh
 subdir = bin
 mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../config.h
-CONFIG_CLEAN_FILES =  iv2h.sh
+CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 DATA =  $(noinst_DATA)
 
-DIST_COMMON =  Makefile.am Makefile.in iv2h.sh.in
+DIST_COMMON =  Makefile.am Makefile.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -100,8 +103,6 @@ Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
 	cd $(top_builddir) \
 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 
-iv2h.sh: $(top_builddir)/config.status iv2h.sh.in
-	cd $(top_builddir) && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
 tags: TAGS
 TAGS:
 
@@ -182,6 +183,13 @@ all-redirect all-am all install-strip installdirs mostlyclean-generic \
 distclean-generic clean-generic maintainer-clean-generic clean \
 mostlyclean distclean maintainer-clean
 
+
+############################################################################
+
+iv2h.sh: $(top_srcdir)/bin/iv2h.sh.in
+	@( cd $(top_builddir); $(MAKE) built-sources )
+
+############################################################################
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
