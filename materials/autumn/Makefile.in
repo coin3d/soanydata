@@ -101,7 +101,7 @@ BUILT_SOURCES = \
 
 noinst_HEADERS = $(BUILT_SOURCES)
 subdir = materials/autumn
-mkinstalldirs = $(SHELL) $(top_srcdir)/../mkinstalldirs
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
 CONFIG_HEADER = ../../config.h
 CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
