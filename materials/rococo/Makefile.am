@@ -12,111 +12,156 @@ BUILT_SOURCES = \
 
 noinst_DATA = $(BUILT_SOURCES)
 
+materialdir = $(datadir)/Coin/materials/rococo
+material_DATA = \
+	rococo.0 rococo.1 rococo.2 rococo.3 rococo.4 \
+	rococo.5 rococo.6 rococo.7 rococo.8 rococo.9 \
+	rococo.10 rococo.11 rococo.12 rococo.13 rococo.14 \
+	rococo.15 rococo.16 rococo.17 rococo.18 rococo.19 \
+	rococo.20 rococo.21 rococo.22 rococo.23 rococo.24 \
+	rococo.25 rococo.26 rococo.27 rococo.28 rococo.29 \
+	rococo.30 rococo.31 rococo.32 rococo.33 rococo.34
+
 ############################################################################
 
-rococo_0.h: $(top_srcdir)/materials/rococo/rococo.0
+rococo_0.h: \
+  $(top_srcdir)/materials/rococo/rococo.0 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_1.h: $(top_srcdir)/materials/rococo/rococo.1
+rococo_1.h: \
+  $(top_srcdir)/materials/rococo/rococo.1 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_2.h: $(top_srcdir)/materials/rococo/rococo.2
+rococo_2.h: \
+  $(top_srcdir)/materials/rococo/rococo.2 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_3.h: $(top_srcdir)/materials/rococo/rococo.3
+rococo_3.h: \
+  $(top_srcdir)/materials/rococo/rococo.3 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_4.h: $(top_srcdir)/materials/rococo/rococo.4
+rococo_4.h: \
+  $(top_srcdir)/materials/rococo/rococo.4 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_5.h: $(top_srcdir)/materials/rococo/rococo.5
+rococo_5.h: \
+  $(top_srcdir)/materials/rococo/rococo.5 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_6.h: $(top_srcdir)/materials/rococo/rococo.6
+rococo_6.h: \
+  $(top_srcdir)/materials/rococo/rococo.6 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_7.h: $(top_srcdir)/materials/rococo/rococo.7
+rococo_7.h: \
+  $(top_srcdir)/materials/rococo/rococo.7 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_8.h: $(top_srcdir)/materials/rococo/rococo.8
+rococo_8.h: \
+  $(top_srcdir)/materials/rococo/rococo.8 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_9.h: $(top_srcdir)/materials/rococo/rococo.9
+rococo_9.h: \
+  $(top_srcdir)/materials/rococo/rococo.9 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_10.h: $(top_srcdir)/materials/rococo/rococo.10
+rococo_10.h: \
+  $(top_srcdir)/materials/rococo/rococo.10 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_11.h: $(top_srcdir)/materials/rococo/rococo.11
+rococo_11.h: \
+  $(top_srcdir)/materials/rococo/rococo.11 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_12.h: $(top_srcdir)/materials/rococo/rococo.12
+rococo_12.h: \
+  $(top_srcdir)/materials/rococo/rococo.12 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_13.h: $(top_srcdir)/materials/rococo/rococo.13
+rococo_13.h: \
+  $(top_srcdir)/materials/rococo/rococo.13 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_14.h: $(top_srcdir)/materials/rococo/rococo.14
+rococo_14.h: \
+  $(top_srcdir)/materials/rococo/rococo.14 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_15.h: $(top_srcdir)/materials/rococo/rococo.15
+rococo_15.h: \
+  $(top_srcdir)/materials/rococo/rococo.15 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_16.h: $(top_srcdir)/materials/rococo/rococo.16
+rococo_16.h: \
+  $(top_srcdir)/materials/rococo/rococo.16 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_17.h: $(top_srcdir)/materials/rococo/rococo.17
+rococo_17.h: \
+  $(top_srcdir)/materials/rococo/rococo.17 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_18.h: $(top_srcdir)/materials/rococo/rococo.18
+rococo_18.h: \
+  $(top_srcdir)/materials/rococo/rococo.18 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_19.h: $(top_srcdir)/materials/rococo/rococo.19
+rococo_19.h: \
+  $(top_srcdir)/materials/rococo/rococo.19 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_20.h: $(top_srcdir)/materials/rococo/rococo.20
+rococo_20.h: \
+  $(top_srcdir)/materials/rococo/rococo.20 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_21.h: $(top_srcdir)/materials/rococo/rococo.21
+rococo_21.h: \
+  $(top_srcdir)/materials/rococo/rococo.21 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_22.h: $(top_srcdir)/materials/rococo/rococo.22
+rococo_22.h: \
+  $(top_srcdir)/materials/rococo/rococo.22 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_23.h: $(top_srcdir)/materials/rococo/rococo.23
+rococo_23.h: \
+  $(top_srcdir)/materials/rococo/rococo.23 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_24.h: $(top_srcdir)/materials/rococo/rococo.24
+rococo_24.h: \
+  $(top_srcdir)/materials/rococo/rococo.24 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_25.h: $(top_srcdir)/materials/rococo/rococo.25
+rococo_25.h: \
+  $(top_srcdir)/materials/rococo/rococo.25 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_26.h: $(top_srcdir)/materials/rococo/rococo.26
+rococo_26.h: \
+  $(top_srcdir)/materials/rococo/rococo.26 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_27.h: $(top_srcdir)/materials/rococo/rococo.27
+rococo_27.h: \
+  $(top_srcdir)/materials/rococo/rococo.27 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_28.h: $(top_srcdir)/materials/rococo/rococo.28
+rococo_28.h: \
+  $(top_srcdir)/materials/rococo/rococo.28 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_29.h: $(top_srcdir)/materials/rococo/rococo.29
+rococo_29.h: \
+  $(top_srcdir)/materials/rococo/rococo.29 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_30.h: $(top_srcdir)/materials/rococo/rococo.30
+rococo_30.h: \
+  $(top_srcdir)/materials/rococo/rococo.30 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_31.h: $(top_srcdir)/materials/rococo/rococo.31
+rococo_31.h: \
+  $(top_srcdir)/materials/rococo/rococo.31 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_32.h: $(top_srcdir)/materials/rococo/rococo.32
+rococo_32.h: \
+  $(top_srcdir)/materials/rococo/rococo.32 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_33.h: $(top_srcdir)/materials/rococo/rococo.33
+rococo_33.h: \
+  $(top_srcdir)/materials/rococo/rococo.33 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
-rococo_34.h: $(top_srcdir)/materials/rococo/rococo.34
+rococo_34.h: \
+  $(top_srcdir)/materials/rococo/rococo.34 $(top_builddir)/bin/iv2h.sh
 	$(top_builddir)/bin/iv2h.sh $^ > $@
 
 ############################################################################

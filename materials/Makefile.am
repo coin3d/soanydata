@@ -3,6 +3,7 @@
 ## $Id$
 
 SUBDIRS = \
+	artdeco \
 	autumn \
 	glass \
 	metal \

@@ -1000,6 +1000,7 @@ cat >$CONFIG_STATUS <<EOF
 # Files that config.status was made for.
 config_files="\\
     Makefile bin/Makefile bin/iv2h.sh materials/Makefile materials/materials.h
+    materials/artdeco/Makefile materials/artdeco/artdeco.h
     materials/autumn/Makefile materials/autumn/autumn.h
     materials/glass/Makefile materials/glass/glass.h materials/metal/Makefile
     materials/metal/metal.h materials/neon/Makefile materials/neon/neon.h
@@ -1059,6 +1060,8 @@ do
   'bin/iv2h.sh' ) CONFIG_FILES="\$CONFIG_FILES bin/iv2h.sh" ;;
   'materials/Makefile' ) CONFIG_FILES="\$CONFIG_FILES materials/Makefile" ;;
   'materials/materials.h' ) CONFIG_FILES="\$CONFIG_FILES materials/materials.h" ;;
+  'materials/artdeco/Makefile' ) CONFIG_FILES="\$CONFIG_FILES materials/artdeco/Makefile" ;;
+  'materials/artdeco/artdeco.h' ) CONFIG_FILES="\$CONFIG_FILES materials/artdeco/artdeco.h" ;;
   'materials/autumn/Makefile' ) CONFIG_FILES="\$CONFIG_FILES materials/autumn/Makefile" ;;
   'materials/autumn/autumn.h' ) CONFIG_FILES="\$CONFIG_FILES materials/autumn/autumn.h" ;;
   'materials/glass/Makefile' ) CONFIG_FILES="\$CONFIG_FILES materials/glass/Makefile" ;;

@@ -78,6 +78,7 @@ uGUI = @uGUI@
 
 
 SUBDIRS = \
+	artdeco \
 	autumn \
 	glass \
 	metal \

@@ -35,6 +35,8 @@ AC_OUTPUT([
 	bin/iv2h.sh
 	materials/Makefile
 	materials/materials.h
+	materials/artdeco/Makefile
+	materials/artdeco/artdeco.h
 	materials/autumn/Makefile
 	materials/autumn/autumn.h
 	materials/glass/Makefile

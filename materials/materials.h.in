@@ -25,6 +25,7 @@
 
 /* ********************************************************************** */
 
+#include <materials/artdeco/artdeco.h>
 #include <materials/autumn/autumn.h>
 #include <materials/glass/glass.h>
 #include <materials/metal/metal.h>
