@@ -1,7 +1,10 @@
 # **************************************************************************
 # data/configure.in
 
-AC_INIT(materials/Makefile.am)
+AC_PREREQ(2.50)
+AC_INIT([SoAnyData], [1.0.0], [coin-support@coin3d.org])
+
+AC_CONFIG_SRCDIR(materials/Makefile.am)
 AC_CONFIG_AUX_DIR(cfg)
 
 # **************************************************************************
@@ -28,6 +31,15 @@ fi
 AC_SUBST([GUI], [$AC_SUBST_GUI])
 AC_SUBST([Gui], [$AC_SUBST_Gui])
 AC_SUBST([gui], [$AC_SUBST_gui])
+
+if test x"${sim_ac_framework+set}" = x"set" && $sim_ac_framework; then
+  AM_CONDITIONAL([MAC_FRAMEWORK], [true])
+else
+  AM_CONDITIONAL([MAC_FRAMEWORK], [false])
+fi
+AC_SUBST([MAC_FRAMEWORK_NAME])
+AC_SUBST([MAC_FRAMEWORK_PREFIX])
+AC_SUBST([MAC_FRAMEWORK_VERSION])
 
 # **************************************************************************
 # All files configure must automatically generate.
