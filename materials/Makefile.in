@@ -1,6 +1,7 @@
 # Makefile.in generated automatically by automake 1.4a from Makefile.am
 
-# Copyright (C) 1994, 1995-9, 2000 Free Software Foundation, Inc.
+# Copyright 1994, 1995, 1996, 1997, 1998, 1999, 2000
+# Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
 # gives unlimited permission to copy and/or distribute it,
 # with or without modifications, as long as this notice is preserved.
@@ -143,10 +144,11 @@ maintainer-clean-recursive:
 	@set fnord $(MAKEFLAGS); amf=$$2; \
 	dot_seen=no; \
 	rev=''; list='$(SUBDIRS)'; for subdir in $$list; do \
-	  rev="$$subdir $$rev"; \
-	  if test "$$subdir" = "."; then dot_seen=yes; else :; fi; \
+	  if test "$$subdir" = "."; then :; else \
+	    rev="$$subdir $$rev"; \
+	  fi; \
 	done; \
-	test "$$dot_seen" = "no" && rev=". $$rev"; \
+	rev="$$rev ."; \
 	target=`echo $@ | sed s/-recursive//`; \
 	for subdir in $$rev; do \
 	  echo "Making $$target in $$subdir"; \

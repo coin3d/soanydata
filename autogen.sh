@@ -16,11 +16,11 @@ if ! test -f ./autogen.sh; then
   exit 1
 fi
 
-AUTOCONF_VER=2.14a    # Autoconf from CVS
+AUTOCONF_VER=2.49b    # Autoconf from CVS
 AUTOMAKE_VER=1.4a     # Automake from CVS
 LIBTOOL_VER=1.3.5
 
-MACRODIR=../conf-macros
+MACRODIR=../conf-macros-CVS
 DIE=false
 
 if test "$1" = "--clean"; then
