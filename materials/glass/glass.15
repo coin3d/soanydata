@@ -6,5 +6,5 @@ Material {
 	specularColor	1.0 1.0 1.0
 	emissiveColor	0 0 0
 	shininess	0.81818875
-	transparency	26315
+	transparency	0.40154116
 }
