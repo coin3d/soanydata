@@ -31,6 +31,7 @@ AC_SUBST(uGUI)
 
 AC_OUTPUT([
 	Makefile
+	bin/Makefile
 	materials/Makefile
 	materials/autumn/Makefile
 	materials/glass/Makefile

@@ -1,0 +1,40 @@
+#ifndef SO@GUI@_AUTUMNMATERIALS_IV_H
+#define SO@GUI@_AUTUMNMATERIALS_IV_H
+
+#include <data/materials/autumn_0.h>
+#include <data/materials/autumn_1.h>
+#include <data/materials/autumn_2.h>
+#include <data/materials/autumn_3.h>
+#include <data/materials/autumn_4.h>
+#include <data/materials/autumn_5.h>
+#include <data/materials/autumn_6.h>
+#include <data/materials/autumn_7.h>
+#include <data/materials/autumn_8.h>
+#include <data/materials/autumn_9.h>
+#include <data/materials/autumn_10.h>
+#include <data/materials/autumn_11.h>
+#include <data/materials/autumn_12.h>
+#include <data/materials/autumn_13.h>
+#include <data/materials/autumn_14.h>
+#include <data/materials/autumn_15.h>
+#include <data/materials/autumn_16.h>
+#include <data/materials/autumn_17.h>
+#include <data/materials/autumn_18.h>
+#include <data/materials/autumn_19.h>
+#include <data/materials/autumn_20.h>
+#include <data/materials/autumn_21.h>
+#include <data/materials/autumn_22.h>
+#include <data/materials/autumn_23.h>
+#include <data/materials/autumn_24.h>
+#include <data/materials/autumn_25.h>
+#include <data/materials/autumn_26.h>
+#include <data/materials/autumn_27.h>
+#include <data/materials/autumn_28.h>
+#include <data/materials/autumn_29.h>
+#include <data/materials/autumn_30.h>
+#include <data/materials/autumn_31.h>
+#include <data/materials/autumn_32.h>
+#include <data/materials/autumn_33.h>
+#include <data/materials/autumn_34.h>
+
+#endif /* SO@GUI@_AUTUMNMATERIALS_IV_H */

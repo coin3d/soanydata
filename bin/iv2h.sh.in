@@ -7,8 +7,6 @@ style=`echo $filename | cut -d. -f1`
 STYLE=`echo $filename | cut -d. -f1 | tr a-z A-Z`
 number=`echo $filename | cut -d. -f2`
 
-# cat $1 
-
 cat <<HERE_DOC_END
 /**************************************************************************
  *
@@ -37,7 +35,17 @@ cat <<HERE_DOC_END
 static const char ${style}${number}_iv[] =
 HERE_DOC_END
 
-cat $1 | sed -e 's/^\(.*\)$/  "\1\\n"/' -e '$ s/$/;/'
+cat $1 | sed -e \
+'s/\\/\\\\/g
+s/"/\\"/g
+3,$ {
+s/^[ \t]*#.*//
+/^$/ d
+}
+s/^\(.*\)$/  "\1\\n"/
+$ s/$/;/'
+
+# ATTN: the file did not just get corrupted ;-)
 
 cat <<HERE_DOC_END
 

@@ -19,11 +19,8 @@ fi
 GUI=Xt
 
 PROJECT=So$GUI
-MACRODIR=conf-macros
+MACRODIR=../conf-macros
 DIE=false
-
-SUBPROJECTS="$MACRODIR data examples"
-SUBPROJECTNAMES="$MACRODIR SoXtData SoXtExamples"
 
 if test "$1" = "--clean"; then
   rm -f aclocal.m4 \
@@ -38,9 +35,8 @@ if test "$1" = "--clean"; then
 	missing \
 	mkinstalldirs \
 	stamp-h*
-  find . -name Makefile.in -print | \
-        egrep -v '^\./(examples|ivexamples)/' | xargs rm
-  exit
+  find . -name Makefile.in -print | xargs rm
+  exit 0
 elif test "$1" = "--add"; then
   AUTOMAKE_ADD="--add-missing --gnu --copy"
 fi
