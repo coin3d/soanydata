@@ -1,4 +1,4 @@
-# Makefile.in generated automatically by automake 1.4a-SIM-20000531 from Makefile.am
+# Makefile.in generated automatically by automake 1.4a from Makefile.am
 
 # Copyright (C) 1994, 1995-9, 2000 Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
@@ -66,13 +66,13 @@ CXX = @CXX@
 CXXCPP = @CXXCPP@
 DEPDIR = @DEPDIR@
 GUI = @GUI@
+Gui = @Gui@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 PACKAGE = @PACKAGE@
 VERSION = @VERSION@
+gui = @gui@
 install_sh = @install_sh@
-lGUI = @lGUI@
-uGUI = @uGUI@
 
 ############################################################################
 
@@ -101,7 +101,7 @@ BUILT_SOURCES = \
 
 noinst_DATA = $(BUILT_SOURCES)
 subdir = materials/rococo
-mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+mkinstalldirs = $(SHELL) $(top_srcdir)/../mkinstalldirs
 CONFIG_HEADER = ../../config.h
 CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 

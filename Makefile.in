@@ -1,4 +1,4 @@
-# Makefile.in generated automatically by automake 1.4a-SIM-20000531 from Makefile.am
+# Makefile.in generated automatically by automake 1.4a from Makefile.am
 
 # Copyright (C) 1994, 1995-9, 2000 Free Software Foundation, Inc.
 # This Makefile.in is free software; the Free Software Foundation
@@ -66,13 +66,13 @@ CXX = @CXX@
 CXXCPP = @CXXCPP@
 DEPDIR = @DEPDIR@
 GUI = @GUI@
+Gui = @Gui@
 MAINT = @MAINT@
 MAKEINFO = @MAKEINFO@
 PACKAGE = @PACKAGE@
 VERSION = @VERSION@
+gui = @gui@
 install_sh = @install_sh@
-lGUI = @lGUI@
-uGUI = @uGUI@
 
 ############################################################################
 
@@ -100,15 +100,16 @@ BUILT_SOURCES = \
 noinst_HEADERS = $(BUILT_SOURCES)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+mkinstalldirs = $(SHELL) $(top_srcdir)/../mkinstalldirs
 CONFIG_HEADER = config.h
 CONFIG_CLEAN_FILES = 
 DIST_SOURCES = 
 HEADERS =  $(noinst_HEADERS)
 
-DIST_COMMON =  README $(noinst_HEADERS) ./stamp-h.in AUTHORS COPYING \
-ChangeLog INSTALL Makefile.am Makefile.in NEWS aclocal.m4 config.h.in \
-configure configure.in install-sh missing mkinstalldirs
+DIST_COMMON =  README $(noinst_HEADERS) ../install-sh ../missing \
+../mkinstalldirs ./stamp-h.in AUTHORS COPYING ChangeLog INSTALL \
+Makefile.am Makefile.in NEWS aclocal.m4 config.h.in configure \
+configure.in
 
 
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -307,7 +308,7 @@ dist-all: distdir
 distdir: $(DISTFILES)
 	-chmod -R a+w $(distdir) > /dev/null 2>&1; rm -rf $(distdir)
 	mkdir $(distdir)
-	$(mkinstalldirs) $(distdir)/bin $(distdir)/materials \
+	$(mkinstalldirs) $(distdir)/.. $(distdir)/bin $(distdir)/materials \
 	   $(distdir)/materials/artdeco $(distdir)/materials/autumn \
 	   $(distdir)/materials/glass $(distdir)/materials/metal \
 	   $(distdir)/materials/neon $(distdir)/materials/rococo \

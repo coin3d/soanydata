@@ -20,8 +20,8 @@
 /*  $Id$  */
 /*  @configure_input@  */
 
-#ifndef SO@uGUI@_MATERIALS_IV_H
-#define SO@uGUI@_MATERIALS_IV_H
+#ifndef SO@GUI@_MATERIALS_IV_H
+#define SO@GUI@_MATERIALS_IV_H
 
 /* ********************************************************************** */
 
@@ -39,7 +39,7 @@
 #include <materials/tropical/tropical.h>
 #include <materials/winter/winter.h>
 
-enum So@GUI@MaterialStyle {
+enum So@Gui@MaterialStyle {
   ARTDECO,
   AUTUMN,
   GLASS,
@@ -58,4 +58,4 @@ enum So@GUI@MaterialStyle {
 
 /* ********************************************************************** */
 
-#endif /* ! SO@uGUI@_MATERIALS_IV_H */
+#endif /* ! SO@GUI@_MATERIALS_IV_H */

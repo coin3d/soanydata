@@ -23,8 +23,8 @@ if test -f ${sim_ac_libconfigvars}; then
 fi
 
 AC_SUBST(GUI)
-AC_SUBST(lGUI)
-AC_SUBST(uGUI)
+AC_SUBST(Gui)
+AC_SUBST(gui)
 
 # **************************************************************************
 # All files configure must automatically generate.

@@ -20,8 +20,8 @@
 /*  $Id$  */
 /*  @configure_input@  */
 
-#ifndef SO@uGUI@_WINTERMATERIALS_IV_H
-#define SO@uGUI@_WINTERMATERIALS_IV_H
+#ifndef SO@GUI@_WINTERMATERIALS_IV_H
+#define SO@GUI@_WINTERMATERIALS_IV_H
 
 /* ********************************************************************** */
 
@@ -63,4 +63,4 @@
 
 /* ********************************************************************** */
 
-#endif /* SO@uGUI@_WINTERMATERIALS_IV_H */
+#endif /* SO@GUI@_WINTERMATERIALS_IV_H */
