@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/sheen
-material_DATA = \
+dist_material_DATA = \
 	sheen.0 sheen.1 sheen.2 sheen.3 sheen.4 \
 	sheen.5 sheen.6 sheen.7 sheen.8 sheen.9 \
 	sheen.10 sheen.11 sheen.12 sheen.13 sheen.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	sheen_30.h sheen_31.h sheen_32.h sheen_33.h sheen_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

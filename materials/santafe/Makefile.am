@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/santafe
-material_DATA = \
+dist_material_DATA = \
 	santafe.0 santafe.1 santafe.2 santafe.3 santafe.4 \
 	santafe.5 santafe.6 santafe.7 santafe.8 santafe.9 \
 	santafe.10 santafe.11 santafe.12 santafe.13 santafe.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	santafe_30.h santafe_31.h santafe_32.h santafe_33.h santafe_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/silky
-material_DATA = \
+dist_material_DATA = \
 	silky.0 silky.1 silky.2 silky.3 silky.4 \
 	silky.5 silky.6 silky.7 silky.8 silky.9 \
 	silky.10 silky.11 silky.12 silky.13 silky.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	silky_30.h silky_31.h silky_32.h silky_33.h silky_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

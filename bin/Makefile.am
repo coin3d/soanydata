@@ -4,8 +4,14 @@
 
 BUILT_SOURCES = iv2h.sh
 
-noinst_DATA = iv2h.sh
-EXTRA_DIST = iv2h.sh
+EXTRA_DIST = \
+	data2iv.sh \
+	iv2h.sh.in \
+	material-node.sh
+
+all-local: iv2h.sh
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

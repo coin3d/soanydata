@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/metal
-material_DATA = \
+dist_material_DATA = \
 	metal.0 metal.1 metal.2 metal.3 metal.4 \
 	metal.5 metal.6 metal.7 metal.8 metal.9 \
 	metal.10 metal.11 metal.12 metal.13 metal.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	metal_30.h metal_31.h metal_32.h metal_33.h metal_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/spring
-material_DATA = \
+dist_material_DATA = \
 	spring.0 spring.1 spring.2 spring.3 spring.4 \
 	spring.5 spring.6 spring.7 spring.8 spring.9 \
 	spring.10 spring.11 spring.12 spring.13 spring.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	spring_30.h spring_31.h spring_32.h spring_33.h spring_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

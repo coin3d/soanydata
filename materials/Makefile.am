@@ -9,7 +9,9 @@ SUBDIRS = . \
 BUILT_SOURCES = \
 	materials.h
 
-noinst_HEADERS = $(BUILT_SOURCES)
+DISTCLEANFILES = $(BUILT_SOURCES)
+
+all-local: $(BUILT_SOURCES)
 
 ############################################################################
 

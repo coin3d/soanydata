@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/neon
-material_DATA = \
+dist_material_DATA = \
 	neon.0 neon.1 neon.2 neon.3 neon.4 \
 	neon.5 neon.6 neon.7 neon.8 neon.9 \
 	neon.10 neon.11 neon.12 neon.13 neon.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	neon_30.h neon_31.h neon_32.h neon_33.h neon_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/rococo
-material_DATA = \
+dist_material_DATA = \
 	rococo.0 rococo.1 rococo.2 rococo.3 rococo.4 \
 	rococo.5 rococo.6 rococo.7 rococo.8 rococo.9 \
 	rococo.10 rococo.11 rococo.12 rococo.13 rococo.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	rococo_30.h rococo_31.h rococo_32.h rococo_33.h rococo_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/autumn
-material_DATA = \
+dist_material_DATA = \
 	autumn.0 autumn.1 autumn.2 autumn.3 autumn.4 \
 	autumn.5 autumn.6 autumn.7 autumn.8 autumn.9 \
 	autumn.10 autumn.11 autumn.12 autumn.13 autumn.14 \
@@ -22,7 +22,9 @@ BUILT_SOURCES = \
 	autumn_25.h autumn_26.h autumn_27.h autumn_28.h autumn_29.h \
 	autumn_30.h autumn_31.h autumn_32.h autumn_33.h autumn_34.h
 
-noinst_HEADERS = $(BUILT_SOURCES)
+noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

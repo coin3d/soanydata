@@ -82,20 +82,18 @@ BUILT_SOURCES = \
 	materials.h
 
 
-noinst_HEADERS = $(BUILT_SOURCES)
+DISTCLEANFILES = $(BUILT_SOURCES)
 subdir = materials
 mkinstalldirs = $(SHELL) $(top_srcdir)/cfg/mkinstalldirs
 CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 DIST_SOURCES =
-HEADERS = $(noinst_HEADERS)
-
 
 RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
 	uninstall-info-recursive all-recursive install-data-recursive \
 	install-exec-recursive installdirs-recursive install-recursive \
 	uninstall-recursive check-recursive installcheck-recursive
-DIST_COMMON = $(noinst_HEADERS) Makefile.am Makefile.in
+DIST_COMMON = Makefile.am Makefile.in
 DIST_SUBDIRS = $(SUBDIRS)
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
@@ -238,7 +236,7 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-recursive
-all-am: Makefile $(HEADERS)
+all-am: Makefile all-local
 installdirs: installdirs-recursive
 installdirs-am:
 
@@ -261,6 +259,7 @@ clean-generic:
 
 distclean-generic:
 	-rm -f Makefile $(CONFIG_CLEAN_FILES) stamp-h stamp-h[0-9]*
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -304,8 +303,8 @@ uninstall-am: uninstall-info-am
 
 uninstall-info: uninstall-info-recursive
 
-.PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am check check-am clean \
-	clean-generic clean-recursive distclean distclean-generic \
+.PHONY: $(RECURSIVE_TARGETS) GTAGS all all-am all-local check check-am \
+	clean clean-generic clean-recursive distclean distclean-generic \
 	distclean-recursive distclean-tags distdir dvi dvi-am \
 	dvi-recursive info info-am info-recursive install install-am \
 	install-data install-data-am install-data-recursive \
@@ -319,6 +318,8 @@ uninstall-info: uninstall-info-recursive
 	uninstall-am uninstall-info-am uninstall-info-recursive \
 	uninstall-recursive
 
+
+all-local: $(BUILT_SOURCES)
 
 ############################################################################
 

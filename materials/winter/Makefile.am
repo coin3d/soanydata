@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/winter
-material_DATA = \
+dist_material_DATA = \
 	winter.0 winter.1 winter.2 winter.3 winter.4 \
 	winter.5 winter.6 winter.7 winter.8 winter.9 \
 	winter.10 winter.11 winter.12 winter.13 winter.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	winter_30.h winter_31.h winter_32.h winter_33.h winter_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

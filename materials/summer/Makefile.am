@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/summer
-material_DATA = \
+dist_material_DATA = \
 	summer.0 summer.1 summer.2 summer.3 summer.4 \
 	summer.5 summer.6 summer.7 summer.8 summer.9 \
 	summer.10 summer.11 summer.12 summer.13 summer.14 \
@@ -23,6 +23,8 @@ BUILT_SOURCES = \
 	summer_30.h summer_31.h summer_32.h summer_33.h summer_34.h
 
 noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 

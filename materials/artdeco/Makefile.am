@@ -3,7 +3,7 @@
 ## $Id$
 
 materialdir = $(datadir)/Coin/materials/artdeco
-material_DATA = \
+dist_material_DATA = \
 	artdeco.0 artdeco.1 artdeco.2 artdeco.3 artdeco.4 \
 	artdeco.5 artdeco.6 artdeco.7 artdeco.8 artdeco.9 \
 	artdeco.10 artdeco.11 artdeco.12 artdeco.13 artdeco.14 \
@@ -22,7 +22,9 @@ BUILT_SOURCES = \
 	artdeco_25.h artdeco_26.h artdeco_27.h artdeco_28.h artdeco_29.h \
 	artdeco_30.h artdeco_31.h artdeco_32.h artdeco_33.h artdeco_34.h
 
-noinst_HEADERS = $(BUILT_SOURCES)
+noinst_DATA = $(BUILT_SOURCES)
+
+DISTCLEANFILES = $(BUILT_SOURCES)
 
 ############################################################################
 
