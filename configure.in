@@ -18,19 +18,16 @@ AM_MAINTAINER_MODE
 # **************************************************************************
 # Search and set up necessary stuff to use the GUI library.
 
-sim_ac_configcmd=$srcdir/../so*-config
-test -f ../so*-config && sim_ac_configcmd=../so*-config
-if test -f $sim_ac_configcmd; then
-  GUI=`$sim_ac_configcmd --ac-subst GUI`
-  Gui=`$sim_ac_configcmd --ac-subst Gui`
-  gui=`$sim_ac_configcmd --ac-subst gui`
+sim_ac_configfile=../so*-*.cfg
+if test -f $sim_ac_configfile; then
+  . $sim_ac_configfile;
 else
-  AC_MSG_ERROR([found no so*-config command in ..])
+  AC_MSG_ERROR([found no config file in ..])
 fi
 
-AC_SUBST(GUI)
-AC_SUBST(Gui)
-AC_SUBST(gui)
+AC_SUBST([GUI], [$AC_SUBST_GUI])
+AC_SUBST([Gui], [$AC_SUBST_Gui])
+AC_SUBST([gui], [$AC_SUBST_gui])
 
 # **************************************************************************
 # All files configure must automatically generate.
@@ -54,3 +51,4 @@ AC_OUTPUT([
 	materials/winter/Makefile
 ])
 
+# **************************************************************************
