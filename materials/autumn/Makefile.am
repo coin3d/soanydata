@@ -31,142 +31,177 @@ autumn.h: $(top_srcdir)/materials/autumn/autumn.h.in
 
 autumn_0.h: \
   $(top_srcdir)/materials/autumn/autumn.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.0 \
+	  > $@
 
 autumn_1.h: \
   $(top_srcdir)/materials/autumn/autumn.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.1 \
+	  > $@
 
 autumn_2.h: \
   $(top_srcdir)/materials/autumn/autumn.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.2 \
+	  > $@
 
 autumn_3.h: \
   $(top_srcdir)/materials/autumn/autumn.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.3 \
+	  > $@
 
 autumn_4.h: \
   $(top_srcdir)/materials/autumn/autumn.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.4 \
+	  > $@
 
 autumn_5.h: \
   $(top_srcdir)/materials/autumn/autumn.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.5 \
+	  > $@
 
 autumn_6.h: \
   $(top_srcdir)/materials/autumn/autumn.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.6 \
+	  > $@
 
 autumn_7.h: \
   $(top_srcdir)/materials/autumn/autumn.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.7 \
+	  > $@
 
 autumn_8.h: \
   $(top_srcdir)/materials/autumn/autumn.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.8 \
+	  > $@
 
 autumn_9.h: \
   $(top_srcdir)/materials/autumn/autumn.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.9 \
+	  > $@
 
 autumn_10.h: \
   $(top_srcdir)/materials/autumn/autumn.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.10 \
+	  > $@
 
 autumn_11.h: \
   $(top_srcdir)/materials/autumn/autumn.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.11 \
+	  > $@
 
 autumn_12.h: \
   $(top_srcdir)/materials/autumn/autumn.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.12 \
+	  > $@
 
 autumn_13.h: \
   $(top_srcdir)/materials/autumn/autumn.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.13 \
+	  > $@
 
 autumn_14.h: \
   $(top_srcdir)/materials/autumn/autumn.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.14 \
+	  > $@
 
 autumn_15.h: \
   $(top_srcdir)/materials/autumn/autumn.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.15 \
+	  > $@
 
 autumn_16.h: \
   $(top_srcdir)/materials/autumn/autumn.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.16 \
+	  > $@
 
 autumn_17.h: \
   $(top_srcdir)/materials/autumn/autumn.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.17 \
+	  > $@
 
 autumn_18.h: \
   $(top_srcdir)/materials/autumn/autumn.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.18 \
+	  > $@
 
 autumn_19.h: \
   $(top_srcdir)/materials/autumn/autumn.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.19 \
+	  > $@
 
 autumn_20.h: \
   $(top_srcdir)/materials/autumn/autumn.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.20 \
+	  > $@
 
 autumn_21.h: \
   $(top_srcdir)/materials/autumn/autumn.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.21 \
+	  > $@
 
 autumn_22.h: \
   $(top_srcdir)/materials/autumn/autumn.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.22 \
+	  > $@
 
 autumn_23.h: \
   $(top_srcdir)/materials/autumn/autumn.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.23 \
+	  > $@
 
 autumn_24.h: \
   $(top_srcdir)/materials/autumn/autumn.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.24 \
+	  > $@
 
 autumn_25.h: \
   $(top_srcdir)/materials/autumn/autumn.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.25 \
+	  > $@
 
 autumn_26.h: \
   $(top_srcdir)/materials/autumn/autumn.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.26 \
+	  > $@
 
 autumn_27.h: \
   $(top_srcdir)/materials/autumn/autumn.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.27 \
+	  > $@
 
 autumn_28.h: \
   $(top_srcdir)/materials/autumn/autumn.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.28 \
+	  > $@
 
 autumn_29.h: \
   $(top_srcdir)/materials/autumn/autumn.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.29 \
+	  > $@
 
 autumn_30.h: \
   $(top_srcdir)/materials/autumn/autumn.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.30 \
+	  > $@
 
 autumn_31.h: \
   $(top_srcdir)/materials/autumn/autumn.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.31 \
+	  > $@
 
 autumn_32.h: \
   $(top_srcdir)/materials/autumn/autumn.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.32 \
+	  > $@
 
 autumn_33.h: \
   $(top_srcdir)/materials/autumn/autumn.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.33 \
+	  > $@
 
 autumn_34.h: \
   $(top_srcdir)/materials/autumn/autumn.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/autumn/autumn.34 \
+	  > $@
 
 ############################################################################

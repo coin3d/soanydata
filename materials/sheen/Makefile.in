@@ -229,143 +229,143 @@ sheen.h: $(top_srcdir)/materials/sheen/sheen.h.in
 
 sheen_0.h: \
   $(top_srcdir)/materials/sheen/sheen.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.0 > $@
 
 sheen_1.h: \
   $(top_srcdir)/materials/sheen/sheen.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.1 > $@
 
 sheen_2.h: \
   $(top_srcdir)/materials/sheen/sheen.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.2 > $@
 
 sheen_3.h: \
   $(top_srcdir)/materials/sheen/sheen.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.3 > $@
 
 sheen_4.h: \
   $(top_srcdir)/materials/sheen/sheen.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.4 > $@
 
 sheen_5.h: \
   $(top_srcdir)/materials/sheen/sheen.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.5 > $@
 
 sheen_6.h: \
   $(top_srcdir)/materials/sheen/sheen.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.6 > $@
 
 sheen_7.h: \
   $(top_srcdir)/materials/sheen/sheen.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.7 > $@
 
 sheen_8.h: \
   $(top_srcdir)/materials/sheen/sheen.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.8 > $@
 
 sheen_9.h: \
   $(top_srcdir)/materials/sheen/sheen.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.9 > $@
 
 sheen_10.h: \
   $(top_srcdir)/materials/sheen/sheen.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.10 > $@
 
 sheen_11.h: \
   $(top_srcdir)/materials/sheen/sheen.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.11 > $@
 
 sheen_12.h: \
   $(top_srcdir)/materials/sheen/sheen.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.12 > $@
 
 sheen_13.h: \
   $(top_srcdir)/materials/sheen/sheen.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.13 > $@
 
 sheen_14.h: \
   $(top_srcdir)/materials/sheen/sheen.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.14 > $@
 
 sheen_15.h: \
   $(top_srcdir)/materials/sheen/sheen.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.15 > $@
 
 sheen_16.h: \
   $(top_srcdir)/materials/sheen/sheen.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.16 > $@
 
 sheen_17.h: \
   $(top_srcdir)/materials/sheen/sheen.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.17 > $@
 
 sheen_18.h: \
   $(top_srcdir)/materials/sheen/sheen.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.18 > $@
 
 sheen_19.h: \
   $(top_srcdir)/materials/sheen/sheen.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.19 > $@
 
 sheen_20.h: \
   $(top_srcdir)/materials/sheen/sheen.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.20 > $@
 
 sheen_21.h: \
   $(top_srcdir)/materials/sheen/sheen.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.21 > $@
 
 sheen_22.h: \
   $(top_srcdir)/materials/sheen/sheen.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.22 > $@
 
 sheen_23.h: \
   $(top_srcdir)/materials/sheen/sheen.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.23 > $@
 
 sheen_24.h: \
   $(top_srcdir)/materials/sheen/sheen.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.24 > $@
 
 sheen_25.h: \
   $(top_srcdir)/materials/sheen/sheen.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.25 > $@
 
 sheen_26.h: \
   $(top_srcdir)/materials/sheen/sheen.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.26 > $@
 
 sheen_27.h: \
   $(top_srcdir)/materials/sheen/sheen.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.27 > $@
 
 sheen_28.h: \
   $(top_srcdir)/materials/sheen/sheen.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.28 > $@
 
 sheen_29.h: \
   $(top_srcdir)/materials/sheen/sheen.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.29 > $@
 
 sheen_30.h: \
   $(top_srcdir)/materials/sheen/sheen.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.30 > $@
 
 sheen_31.h: \
   $(top_srcdir)/materials/sheen/sheen.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.31 > $@
 
 sheen_32.h: \
   $(top_srcdir)/materials/sheen/sheen.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.32 > $@
 
 sheen_33.h: \
   $(top_srcdir)/materials/sheen/sheen.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.33 > $@
 
 sheen_34.h: \
   $(top_srcdir)/materials/sheen/sheen.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/sheen/sheen.34 > $@
 
 ############################################################################
 

@@ -229,143 +229,178 @@ summer.h: $(top_srcdir)/materials/summer/summer.h.in
 
 summer_0.h: \
   $(top_srcdir)/materials/summer/summer.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.0 \
+	  > $@
 
 summer_1.h: \
   $(top_srcdir)/materials/summer/summer.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.1 \
+	  > $@
 
 summer_2.h: \
   $(top_srcdir)/materials/summer/summer.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.2 \
+	  > $@
 
 summer_3.h: \
   $(top_srcdir)/materials/summer/summer.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.3 \
+	  > $@
 
 summer_4.h: \
   $(top_srcdir)/materials/summer/summer.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.4 \
+	  > $@
 
 summer_5.h: \
   $(top_srcdir)/materials/summer/summer.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.5 \
+	  > $@
 
 summer_6.h: \
   $(top_srcdir)/materials/summer/summer.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.6 \
+	  > $@
 
 summer_7.h: \
   $(top_srcdir)/materials/summer/summer.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.7 \
+	  > $@
 
 summer_8.h: \
   $(top_srcdir)/materials/summer/summer.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.8 \
+	  > $@
 
 summer_9.h: \
   $(top_srcdir)/materials/summer/summer.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.9 \
+	  > $@
 
 summer_10.h: \
   $(top_srcdir)/materials/summer/summer.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.10 \
+	  > $@
 
 summer_11.h: \
   $(top_srcdir)/materials/summer/summer.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.11 \
+	  > $@
 
 summer_12.h: \
   $(top_srcdir)/materials/summer/summer.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.12 \
+	  > $@
 
 summer_13.h: \
   $(top_srcdir)/materials/summer/summer.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.13 \
+	  > $@
 
 summer_14.h: \
   $(top_srcdir)/materials/summer/summer.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.14 \
+	  > $@
 
 summer_15.h: \
   $(top_srcdir)/materials/summer/summer.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.15 \
+	  > $@
 
 summer_16.h: \
   $(top_srcdir)/materials/summer/summer.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.16 \
+	  > $@
 
 summer_17.h: \
   $(top_srcdir)/materials/summer/summer.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.17 \
+	  > $@
 
 summer_18.h: \
   $(top_srcdir)/materials/summer/summer.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.18 \
+	  > $@
 
 summer_19.h: \
   $(top_srcdir)/materials/summer/summer.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.19 \
+	  > $@
 
 summer_20.h: \
   $(top_srcdir)/materials/summer/summer.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.20 \
+	  > $@
 
 summer_21.h: \
   $(top_srcdir)/materials/summer/summer.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.21 \
+	  > $@
 
 summer_22.h: \
   $(top_srcdir)/materials/summer/summer.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.22 \
+	  > $@
 
 summer_23.h: \
   $(top_srcdir)/materials/summer/summer.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.23 \
+	  > $@
 
 summer_24.h: \
   $(top_srcdir)/materials/summer/summer.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.24 \
+	  > $@
 
 summer_25.h: \
   $(top_srcdir)/materials/summer/summer.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.25 \
+	  > $@
 
 summer_26.h: \
   $(top_srcdir)/materials/summer/summer.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.26 \
+	  > $@
 
 summer_27.h: \
   $(top_srcdir)/materials/summer/summer.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.27 \
+	  > $@
 
 summer_28.h: \
   $(top_srcdir)/materials/summer/summer.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.28 \
+	  > $@
 
 summer_29.h: \
   $(top_srcdir)/materials/summer/summer.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.29 \
+	  > $@
 
 summer_30.h: \
   $(top_srcdir)/materials/summer/summer.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.30 \
+	  > $@
 
 summer_31.h: \
   $(top_srcdir)/materials/summer/summer.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.31 \
+	  > $@
 
 summer_32.h: \
   $(top_srcdir)/materials/summer/summer.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.32 \
+	  > $@
 
 summer_33.h: \
   $(top_srcdir)/materials/summer/summer.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.33 \
+	  > $@
 
 summer_34.h: \
   $(top_srcdir)/materials/summer/summer.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/summer/summer.34 \
+	  > $@
 
 ############################################################################
 

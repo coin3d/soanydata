@@ -31,142 +31,142 @@ glass.h: $(top_srcdir)/materials/glass/glass.h.in
 
 glass_0.h: \
   $(top_srcdir)/materials/glass/glass.0 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.0 > $@
 
 glass_1.h: \
   $(top_srcdir)/materials/glass/glass.1 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.1 > $@
 
 glass_2.h: \
   $(top_srcdir)/materials/glass/glass.2 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.2 > $@
 
 glass_3.h: \
   $(top_srcdir)/materials/glass/glass.3 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.3 > $@
 
 glass_4.h: \
   $(top_srcdir)/materials/glass/glass.4 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.4 > $@
 
 glass_5.h: \
   $(top_srcdir)/materials/glass/glass.5 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.5 > $@
 
 glass_6.h: \
   $(top_srcdir)/materials/glass/glass.6 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.6 > $@
 
 glass_7.h: \
   $(top_srcdir)/materials/glass/glass.7 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.7 > $@
 
 glass_8.h: \
   $(top_srcdir)/materials/glass/glass.8 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.8 > $@
 
 glass_9.h: \
   $(top_srcdir)/materials/glass/glass.9 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.9 > $@
 
 glass_10.h: \
   $(top_srcdir)/materials/glass/glass.10 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.10 > $@
 
 glass_11.h: \
   $(top_srcdir)/materials/glass/glass.11 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.11 > $@
 
 glass_12.h: \
   $(top_srcdir)/materials/glass/glass.12 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.12 > $@
 
 glass_13.h: \
   $(top_srcdir)/materials/glass/glass.13 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.13 > $@
 
 glass_14.h: \
   $(top_srcdir)/materials/glass/glass.14 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.14 > $@
 
 glass_15.h: \
   $(top_srcdir)/materials/glass/glass.15 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.15 > $@
 
 glass_16.h: \
   $(top_srcdir)/materials/glass/glass.16 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.16 > $@
 
 glass_17.h: \
   $(top_srcdir)/materials/glass/glass.17 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.17 > $@
 
 glass_18.h: \
   $(top_srcdir)/materials/glass/glass.18 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.18 > $@
 
 glass_19.h: \
   $(top_srcdir)/materials/glass/glass.19 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.19 > $@
 
 glass_20.h: \
   $(top_srcdir)/materials/glass/glass.20 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.20 > $@
 
 glass_21.h: \
   $(top_srcdir)/materials/glass/glass.21 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.21 > $@
 
 glass_22.h: \
   $(top_srcdir)/materials/glass/glass.22 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.22 > $@
 
 glass_23.h: \
   $(top_srcdir)/materials/glass/glass.23 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.23 > $@
 
 glass_24.h: \
   $(top_srcdir)/materials/glass/glass.24 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.24 > $@
 
 glass_25.h: \
   $(top_srcdir)/materials/glass/glass.25 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.25 > $@
 
 glass_26.h: \
   $(top_srcdir)/materials/glass/glass.26 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.26 > $@
 
 glass_27.h: \
   $(top_srcdir)/materials/glass/glass.27 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.27 > $@
 
 glass_28.h: \
   $(top_srcdir)/materials/glass/glass.28 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.28 > $@
 
 glass_29.h: \
   $(top_srcdir)/materials/glass/glass.29 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.29 > $@
 
 glass_30.h: \
   $(top_srcdir)/materials/glass/glass.30 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.30 > $@
 
 glass_31.h: \
   $(top_srcdir)/materials/glass/glass.31 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.31 > $@
 
 glass_32.h: \
   $(top_srcdir)/materials/glass/glass.32 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.32 > $@
 
 glass_33.h: \
   $(top_srcdir)/materials/glass/glass.33 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.33 > $@
 
 glass_34.h: \
   $(top_srcdir)/materials/glass/glass.34 $(top_builddir)/bin/iv2h.sh
-	$(top_builddir)/bin/iv2h.sh $^ > $@
+	$(top_builddir)/bin/iv2h.sh $(top_srcdir)/materials/glass/glass.34 > $@
 
 ############################################################################
