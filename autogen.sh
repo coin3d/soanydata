@@ -16,9 +16,6 @@ if ! test -f ./autogen.sh; then
   exit 1
 fi
 
-GUI=Xt
-
-PROJECT=So$GUI
 MACRODIR=../conf-macros
 DIE=false
 
@@ -35,7 +32,7 @@ if test "$1" = "--clean"; then
 	missing \
 	mkinstalldirs \
 	stamp-h*
-  find . -name Makefile.in -print | xargs rm
+  find . -.type f -name Makefile.in -print | xargs rm
   exit 0
 elif test "$1" = "--add"; then
   AUTOMAKE_ADD="--add-missing --gnu --copy"
@@ -84,25 +81,25 @@ if test -z "`libtool --version | grep \" $LIBTOOL_VER \" 2> /dev/null`"; then
     DIE=true
 fi
 
-set $SUBPROJECTNAMES
-num=1
-for project in $SUBPROJECTS; do
-  test -d $project || {
-    echo "Could not find subdirectory '$project'."
-    echo "It was probably added after you initially fetched $PROJECT."
-    echo "To add the missing module, run 'cvs co $1' from the $PROJECT"
-    echo "base directory."
-    echo ""
-    echo "To do a completely fresh cvs checkout of the whole $PROJECT module,"
-    echo "(if all else fails), remove $PROJECT and run:"
-    echo ""
-    echo "  cvs -z3 -d :pserver:cvs@cvs.sim.no:/export/cvsroot co -P $PROJECT"
-    echo ""
-    DIE=true
-  }
-  num=`expr $num + 1`
-  shift
-done
+# set $SUBPROJECTNAMES
+# num=1
+# for project in $SUBPROJECTS; do
+#   test -d $project || {
+#     echo "Could not find subdirectory '$project'."
+#     echo "It was probably added after you initially fetched $PROJECT."
+#     echo "To add the missing module, run 'cvs co $1' from the $PROJECT"
+#     echo "base directory."
+#     echo ""
+#     echo "To do a completely fresh cvs checkout of the whole $PROJECT module,"
+#     echo "(if all else fails), remove $PROJECT and run:"
+#     echo ""
+#     echo "  cvs -z3 -d :pserver:cvs@cvs.sim.no:/export/cvsroot co -P $PROJECT"
+#     echo ""
+#     DIE=true
+#   }
+#   num=`expr $num + 1`
+#   shift
+# done
 
 $DIE && exit 1
 

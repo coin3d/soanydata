@@ -1427,6 +1427,8 @@ EOF
 cat >>$CONFIG_STATUS <<\EOF
 test -z "$CONFIG_HEADERS" || echo timestamp > stamp-h
 
+	chmod a+x bin/iv2h.sh
+
 exit 0
 EOF
 chmod +x $CONFIG_STATUS

@@ -1,5 +1,122 @@
 ############################################################################
 ## So@GUI@/data/materials/metal/Makefile.am
 
-BUILT_SOURCES =
+BUILT_SOURCES = \
+	metal_0.h metal_1.h metal_2.h metal_3.h metal_4.h \
+	metal_5.h metal_6.h metal_7.h metal_8.h metal_9.h \
+	metal_10.h metal_11.h metal_12.h metal_13.h metal_14.h \
+	metal_15.h metal_16.h metal_17.h metal_18.h metal_19.h \
+	metal_20.h metal_21.h metal_22.h metal_23.h metal_24.h \
+	metal_25.h metal_26.h metal_27.h metal_28.h metal_29.h \
+	metal_30.h metal_31.h metal_32.h metal_33.h metal_34.h
 
+noinst_DATA = $(BUILT_SOURCES)
+
+############################################################################
+
+metal_0.h: $(top_srcdir)/materials/metal/metal.0
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_1.h: $(top_srcdir)/materials/metal/metal.1
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_2.h: $(top_srcdir)/materials/metal/metal.2
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_3.h: $(top_srcdir)/materials/metal/metal.3
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_4.h: $(top_srcdir)/materials/metal/metal.4
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_5.h: $(top_srcdir)/materials/metal/metal.5
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_6.h: $(top_srcdir)/materials/metal/metal.6
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_7.h: $(top_srcdir)/materials/metal/metal.7
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_8.h: $(top_srcdir)/materials/metal/metal.8
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_9.h: $(top_srcdir)/materials/metal/metal.9
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_10.h: $(top_srcdir)/materials/metal/metal.10
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_11.h: $(top_srcdir)/materials/metal/metal.11
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_12.h: $(top_srcdir)/materials/metal/metal.12
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_13.h: $(top_srcdir)/materials/metal/metal.13
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_14.h: $(top_srcdir)/materials/metal/metal.14
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_15.h: $(top_srcdir)/materials/metal/metal.15
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_16.h: $(top_srcdir)/materials/metal/metal.16
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_17.h: $(top_srcdir)/materials/metal/metal.17
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_18.h: $(top_srcdir)/materials/metal/metal.18
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_19.h: $(top_srcdir)/materials/metal/metal.19
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_20.h: $(top_srcdir)/materials/metal/metal.20
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_21.h: $(top_srcdir)/materials/metal/metal.21
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_22.h: $(top_srcdir)/materials/metal/metal.22
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_23.h: $(top_srcdir)/materials/metal/metal.23
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_24.h: $(top_srcdir)/materials/metal/metal.24
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_25.h: $(top_srcdir)/materials/metal/metal.25
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_26.h: $(top_srcdir)/materials/metal/metal.26
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_27.h: $(top_srcdir)/materials/metal/metal.27
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_28.h: $(top_srcdir)/materials/metal/metal.28
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_29.h: $(top_srcdir)/materials/metal/metal.29
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_30.h: $(top_srcdir)/materials/metal/metal.30
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_31.h: $(top_srcdir)/materials/metal/metal.31
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_32.h: $(top_srcdir)/materials/metal/metal.32
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_33.h: $(top_srcdir)/materials/metal/metal.33
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+metal_34.h: $(top_srcdir)/materials/metal/metal.34
+	$(top_builddir)/bin/iv2h.sh $^ > $@
+
+############################################################################

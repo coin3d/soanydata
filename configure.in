@@ -59,6 +59,8 @@ AC_OUTPUT([
 	materials/tropical/tropical.h
 	materials/winter/Makefile
 	materials/winter/winter.h
+], [
+	chmod a+x bin/iv2h.sh
 ])
 
 # **************************************************************************
