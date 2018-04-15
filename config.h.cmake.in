@@ -1,0 +1,7 @@
+/* config.h.  Generated from config.h.cmake.in by CMake.  */
+
+/* Name of package */
+#cmakedefine PACKAGE @PACKAGE@
+
+/* Version number of package */
+#cmakedefine VERSION @VERSION@
